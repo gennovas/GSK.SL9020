@@ -148,5 +148,5 @@ SET  @PRollback = 0
 SET  @PImpact = 1
 EXEC @RC = [dbo].[UETImpactWrapperSp] @PCommit, @PRollback, @PImpact,@RedoViews, @Infobar OUTPUT 
 
-SELECT @Infobar
+--SELECT @Infobar
 GO
