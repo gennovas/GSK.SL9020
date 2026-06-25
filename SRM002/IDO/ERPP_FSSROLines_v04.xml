@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="ERPP_FSSROLines">
+         <ServerName>ERPP_SK</ServerName>
+         <RevisionNo>4</RevisionNo>
+         <RevisionDate>2026-06-15T16:44:01</RevisionDate>
+         <Extends>FSSROLines</Extends>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables />
+         <Methods />
+         <Properties>
+            <Property Name="SROOpenDate" Key="0" Binding="BOUND" Sequence="56">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>open_date</BoundToColumn>
+               <ColumnTableAlias>sro</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DateTimeType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <DateFormat>B</DateFormat>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="SubProblem" Binding="SUBCOLLECTION" Sequence="0">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Subcollection>ERPP_SK_SROLineProblems</Subcollection>
+               <SubcollectionFilter>SroNum=sro_num,SroLine=sro_line</SubcollectionFilter>
+               <SubstitutionProperties />
+               <PropertyAttributes />
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>
