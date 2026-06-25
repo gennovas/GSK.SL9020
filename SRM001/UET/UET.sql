@@ -1,3 +1,6 @@
+SET NOCOUNT ON
+GO
+
 -- Class
 IF NOT EXISTS(SELECT * FROM user_class WHERE class_name = N'Uc_fs_oper_code')
 	INSERT INTO user_class ( class_name, class_label, class_desc, sys_has_fields, sys_has_tables, sys_apply, sys_delete ) 

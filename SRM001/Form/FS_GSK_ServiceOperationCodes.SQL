@@ -12,6 +12,9 @@
      Customize History
      Version 1.0 - Initial
 */
+SET NOCOUNT ON
+GO
+
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ServiceOperationCodes' AND [ScopeType] = 1

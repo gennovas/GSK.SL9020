@@ -1,3 +1,6 @@
+SET NOCOUNT ON
+GO
+
 /*User Defined Types*/
 IF NOT EXISTS(SELECT * FROM UserDefinedTypes WHERE Name = N'SRO_PCAR_Risk')
     INSERT INTO UserDefinedTypes (Name, [Description])

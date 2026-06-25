@@ -173,6 +173,9 @@
         - Initial
         - Add link to SRM003, SRM002       
 */
+SET NOCOUNT ON
+GO
+
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ServiceOrders' AND [ScopeType] = 1

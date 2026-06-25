@@ -1,3 +1,5 @@
+SET NOCOUNT ON
+GO
 /*
 ALTER TABLE fs_sro_mst
 ADD Uf_OpenDateTime AS
