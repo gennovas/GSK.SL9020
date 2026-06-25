@@ -17,6 +17,12 @@
 --         DefProductCode, DefWhse, InitialCommand
 --   Strings: mBackEndMessage, sDescription
 -------------------------------------------------------------------------------
+/*
+     Customize History
+     Name: GSK_ServiceOrderTypes
+     Caption: (GSK) Service Order Types
+     Version 1.0 - Initial
+*/
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ServiceOrderTypes' AND [ScopeType] = 1

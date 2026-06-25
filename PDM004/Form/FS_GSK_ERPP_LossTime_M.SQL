@@ -15,6 +15,10 @@
 --   Validators: GenerateEventWithMessage
 --   PropertyDefaults - Component Class: UserDefinedType
 -------------------------------------------------------------------------------
+/*
+     Customize History
+     Version 1.0 - Initial
+*/
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ERPP_LossTime_M' AND [ScopeType] = 1

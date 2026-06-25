@@ -11,6 +11,10 @@
 --      ActiveXScripts: GSK_ERPP_Defect_M
 --   Strings: Job, mBackEndMessage, Suffix
 -------------------------------------------------------------------------------
+/*
+     Customize History
+     Version 1.0 - Initial
+*/
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ERPP_Defect_M' AND [ScopeType] = 1

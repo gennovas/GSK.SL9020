@@ -79,6 +79,14 @@
 --   PropertyDefaults - Component Class: Button, UserDefinedType
 --   PropertyDefaults - Property Class Extension: Amount, CostPrc
 -------------------------------------------------------------------------------
+/*
+     Customize History
+     Name: GSK_ServiceOrderOperations
+     Caption: (GSK) Service Order Operations
+     Version 1.0 
+        - Initial
+        - Add link to SRM002, SRM001
+*/
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ServiceOrderOperations' AND [ScopeType] = 1

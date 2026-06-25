@@ -87,6 +87,10 @@
 --   PropertyDefaults - Component Class: Button
 --   PropertyDefaults - Property Class Extension: Amount, CostPrc
 -------------------------------------------------------------------------------
+/*
+     Customize History
+     Version 1.0 - Initial
+*/
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ERPP_SK_CurrentMaterials_M' AND [ScopeType] = 1

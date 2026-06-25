@@ -22,7 +22,7 @@
 --         FSSROReasons_ReasonSpecActivitiesEdit, FSSROReasons_ReasonSubGridCol, FSSROReasons_ResolutionSpecSubGridCol,
 --         FSSROReasons_ResolutionSubGridCol, FSSROReasonsGroupBox, GeneralActivitiesButton,
 --         GeneralTab, GroupBoxBilling, GroupBoxGeneral, GroupBoxSRO, GroupBoxSRO1,
---         GroupBoxSRO2, GSK_ByAllDateCombo, GSK_ByAllDateGridCol, GSK_ByAllEdit, GSK_ByAllGridCol,
+--         GroupBoxSRO2, GSK_ByAllDateCombo, GSK_ByAllDateGridCol, GSK_ByAllEdit, GSK_ByAllGridCol, 
 --         GSK_ByAllPICEdit, GSK_ByAllPICGridCol, GSK_ByAllPICStatic, GSK_ByAllStatic,
 --         GSK_ByCaseDateCombo, GSK_ByCaseDateGridCol, GSK_ByCaseDateStatic, GSK_ByCaseDateStatic1,
 --         GSK_ByCaseEdit, GSK_ByCaseGridCol, GSK_ByCasePICEdit, GSK_ByCasePICGridCol,
@@ -79,6 +79,14 @@
 --   PropertyDefaults - Component Class: Button, UserDefinedType
 --   PropertyDefaults - Property Class Extension: Amount, CostPrc
 -------------------------------------------------------------------------------
+/*
+     Customize History
+     Name: GSK_ServiceOrderOperations
+     Caption: (GSK) Service Order Operations
+     Version 1.0 
+        - Initial
+        - Add link to SRM002, SRM001
+*/
 DECLARE @FormID int
 SET @FormID = NULL
 SELECT @FormID = Forms.ID FROM Forms WHERE [Name] = N'GSK_ServiceOrderOperations' AND [ScopeType] = 1
