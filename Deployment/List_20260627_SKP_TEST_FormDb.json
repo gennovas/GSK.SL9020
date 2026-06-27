@@ -1,6 +1,6 @@
 {
   "Server": "SERVER_ERP_SKD",
-  "Database": "SKP_TEST_App",
+  "Database": "SyteLine_Forms",
   "User": "sa",
   "BaseURL": "https://raw.githubusercontent.com/gennovas/GSK.SL9020/main/",
   "Files": [
