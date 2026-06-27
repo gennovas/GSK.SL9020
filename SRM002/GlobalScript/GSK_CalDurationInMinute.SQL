@@ -4,6 +4,10 @@
 -- Objects Scripted:
 --   Scripts: GSK_CalDurationInMinute
 -------------------------------------------------------------------------------
+SET NOCOUNT ON
+GO
+
+
 DECLARE @FormID int
 DELETE FROM ScriptLines WHERE ScriptName = N'GSK_CalDurationInMinute' AND [ScopeType] = 1
 DELETE FROM Scripts WHERE Name = N'GSK_CalDurationInMinute' AND [ScopeType] = 1
