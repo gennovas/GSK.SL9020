@@ -1,0 +1,23 @@
+1. แก้ Permission PowerShell
+	>Set-ExecutionPolicy RemoteSigned
+
+2. คำสั่ง git ที่ใช้ control source code 
+	>git status 
+		เช็คไฟล์ที่มีการเปลี่ยนแปลง
+	>git add ./folder/file 
+		เพิ่มไฟล์เข้า stage
+	>git restore --staged ./folder/file 
+		นำไฟล์ออกจาก staged
+	>git commit ./folder/file -m "ข้อความ"
+		commit ไฟล์เข้า local
+	>git push
+		push ขึ้น server
+	>git log origin/main..HEAD --oneline
+		ตรวจสอบไฟล์ที่ยังไม่ได้ push
+3. คำสั่ง git สำหรับเตรียม Deploy
+	>git show --name-only --oneline HEAD
+		ดูว่ามีไฟล์ไหนบ้างที่แก้ไข
+	>git show HEAD
+		ดูรายละเอียดการแก้ไข
+	>git ls-tree -r main --name-only | findstr /I ".sql"
+		ดูไฟล์ทั้งหมดสำหรับ deploy รอบแรก
