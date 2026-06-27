@@ -10,5 +10,7 @@
 	เพิ่มไฟล์เข้า stage
 3. >git restore --staged ./folder/file 
 	นำไฟล์ออกจาก staged
-4. git commit ./folder/file -m "ข้อความ"
+4. >git commit ./folder/file -m "ข้อความ"
 	commit ไฟล์
+5. >git push
+	push ขึ้น server
