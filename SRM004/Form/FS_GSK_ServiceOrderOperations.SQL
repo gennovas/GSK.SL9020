@@ -6928,7 +6928,7 @@ VALUES (N'sDescription', N'Description', NULL, NULL, 1, N'[NULL]', NULL)
 DELETE FROM [Strings] WHERE [Name] = N'การป้องกัน' AND [ScopeType] = 1 AND [ScopeName] = N'[NULL]' 
 
 INSERT INTO [Strings] ([Name], [String], [String2], [String3], [ScopeType], [ScopeName], [LockedBy] ) 
-VALUES (NCHAR(3585) + NCHAR(3634) + NCHAR(3619) + NCHAR(3611) + NCHAR(3657) + NCHAR(3629) + NCHAR(3591) + NCHAR(3585) + NCHAR(3633) + NCHAR(3609), NCHAR(3585) + NCHAR(3634) + NCHAR(3619) + NCHAR(3611) + NCHAR(3657) + NCHAR(3629) + NCHAR(3591) + NCHAR(3585) + NCHAR(3633) + NCHAR(3609), NULL, NULL, 1, N'[NULL]', NULL)
+VALUES (N'การป้องกัน', NULL, NULL, 1, N'[NULL]', NULL)
 -------------------------------------------------------------------------------
 DELETE FROM [Strings] WHERE [Name] = N'sDate' AND [ScopeType] = 1 AND [ScopeName] = N'[NULL]' 
 
