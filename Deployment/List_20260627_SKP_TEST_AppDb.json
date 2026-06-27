@@ -1,0 +1,15 @@
+{
+  "Server": "SERVER_ERP_SKD",
+  "Database": "SyteLine_AppDemo",
+  "User": "sa",
+  "BaseURL": "https://raw.githubusercontent.com/gennovas/GSK.SL9020/main/",
+  "Files": [
+      "SRM001/UET/UET_SRM001.sql",
+      "SRM002/UET/UET_SRM002.sql",
+      "SRM003/UET/UET_SRM003.sql",
+      "SRM004/UET/UET_SRM004.sql",
+      "SRM002/UserDefinedDataType/UDDT_SRM002.sql",
+      "SRM004/UserDefinedType/UDT_SRM004.sql",
+      "SRM002/SqlTable/ComputedColumn.sql"
+  ]
+}
