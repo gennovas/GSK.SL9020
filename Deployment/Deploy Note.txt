@@ -1,0 +1,14 @@
+แก้ Permission PowerShell
+>Set-ExecutionPolicy RemoteSigned
+
+คำสั่ง git
+
+
+1. >git status 
+	เช็คไฟล์ที่มีการเปลี่ยนแปลง
+2. >git add ./folder/file 
+	เพิ่มไฟล์เข้า stage
+3. >git restore --staged ./folder/file 
+	นำไฟล์ออกจาก staged
+4. git commit ./folder/file -m "ข้อความ"
+	commit ไฟล์
