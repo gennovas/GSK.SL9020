@@ -14,3 +14,7 @@
 	commit ไฟล์
 5. >git push
 	push ขึ้น server
+
+
+6. >git log origin/main..HEAD --oneline
+	ตรวจสอบไฟล์ที่ยังไม่ได้ push
