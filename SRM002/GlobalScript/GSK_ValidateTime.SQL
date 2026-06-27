@@ -4,6 +4,9 @@
 -- Objects Scripted:
 --   Scripts: GSK_ValidateTime
 -------------------------------------------------------------------------------
+SET NOCOUNT ON
+GO
+
 DECLARE @FormID int
 DELETE FROM ScriptLines WHERE ScriptName = N'GSK_ValidateTime' AND [ScopeType] = 1
 DELETE FROM Scripts WHERE Name = N'GSK_ValidateTime' AND [ScopeType] = 1
