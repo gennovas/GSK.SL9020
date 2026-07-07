@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="GSK_ERPP_LossTimes">
+         <ServerName>ERPP</ServerName>
+         <RevisionNo>2</RevisionNo>
+         <RevisionDate>2026-07-05T15:39:10</RevisionDate>
+         <CustomAssemblyName>GSK.IDOExtensionClasses</CustomAssemblyName>
+         <ExtClassNamespace>GSK.IDOExtensionClasses</ExtClassNamespace>
+         <ExtClassName>GSK_ERPP_LossTimes</ExtClassName>
+         <Extends>ERPP_LossTimes</Extends>
+         <ReplaceFlag>1</ReplaceFlag>
+         <Tables />
+         <Methods>
+            <Method Name="GSK_GetJobtranInfoSp" Transactional="NO">
+               <MethodType>2</MethodType>
+               <Parameters>
+                  <Parameter Name="Infobar" Sequence="6">
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="JobtranJob" Sequence="2">
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="JobtranOperNum" Sequence="4">
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="JobtranSuffix" Sequence="3">
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="JobtranTransDate" Sequence="5">
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="JobtranTransNum" Sequence="1">
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+         </Methods>
+         <Properties />
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>
