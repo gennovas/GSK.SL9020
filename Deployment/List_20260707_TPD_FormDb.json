@@ -1,0 +1,11 @@
+{
+  "Files": [
+      "PDM002/Form/FS_GSK_ERPP_SK_CurrentMaterials_M.SQL",
+      "PDM002/Form/FS_GSK_EstimatedMaterials.SQL",
+      "PDM002/Form/FS_GSK_JobMaterials.SQL",
+      "PDM004/Form/FS_GSK_ERPP_Defect_M.SQL",
+      "PDM004/Form/FS_GSK_ERPP_LossTime_M.SQL",
+      "PDM004/Validator/GSK_VLD_Jobtran.SQL",
+      "PDM008/Form/FS_GSK_ERPP_UnpostedJobTransactions_M.SQL"
+  ]
+}
