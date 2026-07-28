@@ -113,7 +113,7 @@ INSERT INTO [Forms] (
   [StandardOperations], [TopPos], [LeftPos], [Height], [Width], [IconFileName], [HelpFileName], [HelpContextID], [Flags], [LockedBy], 
   [FilterFormSpec], [PaneZeroSize], [Description], [MasterDeviceID], [BaseFormName] ) 
 VALUES ( 
-  1, N'[NULL]', NULL, N'GSK_ERPP_SK_CurrentMaterials_M', NULL, 0, N'(ERPP) Current Materials [M]', 
+  1, N'[NULL]', NULL, N'GSK_ERPP_SK_CurrentMaterials_M', NULL, 0, N'(GSK) Current Materials [M]', 
   N'V(fds_DataSource)', 
   1019, CAST('0' AS float), CAST('0' AS float), CAST('38.799999999999997' AS float), CAST('142' AS float), NULL, N'default.html?helpcontent=mergedProjects/sl_invprod/forms/invtopic/current_materials.htm', -1, 970, NULL, 
   N'CurrentMaterialsQuery( )', N'27.25', NULL, 0, NULL)

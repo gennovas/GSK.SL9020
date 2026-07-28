@@ -1,0 +1,9 @@
+{
+  "ServerName": "SERVER_ERP_SKD",
+  "DatabaseName": "SKP_TEST_App",
+  "SQLUser": "sa",
+  "SQLPassword": "#logic1122",
+  "Files": [
+      "CRR004/SP/GEN_Rpt_RequestForQuotationReportSp.sql"
+  ]
+}

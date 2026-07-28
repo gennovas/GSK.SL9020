@@ -1,0 +1,21 @@
+{
+  "ServerName": "SERVER_ERP_SKD",
+  "DatabaseName": "SKP_TEST_App",
+  "SQLUser": "sa",
+  "SQLPassword": "#logic1122",
+  "Files": [
+      "AppMessage/GEN_mApproveQuatationCompleted.sql",
+      "AppMessage/GEN_mApproveRFQCompleted.sql",
+      "AppMessage/GEN_mEQuatationIsNotOriginal.sql",
+      "AppMessage/GEN_mERFQIsNotOriginal.sql",
+      "AppMessage/GEN_mQuatationCreated.sql",
+      "AppMessage/GEN_mRFQCreated.sql",
+      "CRM001/UET/UET_CRM001.sql",
+      "CRM007/SP/GEN_ApproveRFQSp.sql",
+      "CRM007/SP/GEN_CopyRequestForQuatationSp.sql",
+      "CRM007/UET/UET_CRM007.sql",
+      "CRM008/SP/GEN_ApproveQuotationSp.sql",
+      "CRM008/SP/GEN_CopyQuatationSp.sql",
+      "CRM008/UET/UET_CRM008.sql"
+  ]
+}

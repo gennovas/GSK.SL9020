@@ -31,7 +31,7 @@ INSERT INTO [Forms] (
   [StandardOperations], [TopPos], [LeftPos], [Height], [Width], [IconFileName], [HelpFileName], [HelpContextID], [Flags], [LockedBy], 
   [FilterFormSpec], [PaneZeroSize], [Description], [MasterDeviceID], [BaseFormName] ) 
 VALUES ( 
-  1, N'[NULL]', NULL, N'GSK_ERPP_Defect_M', NULL, 1, N'(ERPP) Defect [M]', 
+  1, N'[NULL]', NULL, N'GSK_ERPP_Defect_M', NULL, 1, N'(GSK) Defect [M]', 
   N'V(fds_DataSource)', 
   1019, CAST('0' AS float), CAST('0' AS float), CAST('23' AS float), CAST('100' AS float), NULL, NULL, -1, 8, NULL, 
   NULL, N'0', NULL, 0, NULL)

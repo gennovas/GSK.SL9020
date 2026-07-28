@@ -1,0 +1,231 @@
+22/07/2026 12:03:54 [FAILED] AppMessage/GEN_mApproveQuatationCompleted.sql
+22/07/2026 12:03:54 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:54 [FAILED] AppMessage/GEN_mApproveRFQCompleted.sql
+22/07/2026 12:03:54 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:54 [FAILED] AppMessage/GEN_mEQuatationIsNotOriginal.sql
+22/07/2026 12:03:54 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:54 [FAILED] AppMessage/GEN_mERFQIsNotOriginal.sql
+22/07/2026 12:03:54 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:54 [FAILED] AppMessage/GEN_mQuatationCreated.sql
+22/07/2026 12:03:54 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:54 [FAILED] AppMessage/GEN_mRFQCreated.sql
+22/07/2026 12:03:54 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:55 [FAILED] CRM001/Form/FS_GSK_ERPP_SK_QuotationLine_M.SQL
+22/07/2026 12:03:55 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:55 [FAILED] CRM001/UET/UET_CRM001.sql
+22/07/2026 12:03:55 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:55 [FAILED] CRM007/Form/FS_GSK_ApproveRFQ.SQL
+22/07/2026 12:03:55 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:55 [FAILED] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotation_M.SQL
+22/07/2026 12:03:55 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:55 [FAILED] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotationLines_M.SQL
+22/07/2026 12:03:55 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:56 [FAILED] CRM007/SP/GEN_ApproveRFQSp.sql
+22/07/2026 12:03:56 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:56 [FAILED] CRM007/SP/GEN_CopyRequestForQuatationSp.sql
+22/07/2026 12:03:56 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:56 [FAILED] CRM007/UET/UET_CRM007.sql
+22/07/2026 12:03:56 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:56 [FAILED] CRM008/Form/FS_GSK_ApproveQuotation.SQL
+22/07/2026 12:03:56 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:56 [FAILED] CRM008/Form/FS_GSK_ERPP_SK_Quotation_M.SQL
+22/07/2026 12:03:56 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:56 [FAILED] CRM008/SP/GEN_ApproveQuotationSp.sql
+22/07/2026 12:03:56 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:57 [FAILED] CRM008/SP/GEN_CopyQuatationSp.sql
+22/07/2026 12:03:57 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:57 [FAILED] CRM008/UET/UET_CRM008.sql
+22/07/2026 12:03:57 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:57 [FAILED] PDM004/Form/FS_GSK_ERPP_Defect_M.SQL
+22/07/2026 12:03:57 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:03:57 [FAILED] PDM004/Form/FS_GSK_ERPP_LossTime_M.SQL
+22/07/2026 12:03:57 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:38 [FAILED] AppMessage/GEN_mApproveQuatationCompleted.sql
+22/07/2026 12:04:38 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:38 [FAILED] AppMessage/GEN_mApproveRFQCompleted.sql
+22/07/2026 12:04:38 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:38 [FAILED] AppMessage/GEN_mEQuatationIsNotOriginal.sql
+22/07/2026 12:04:38 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:38 [FAILED] AppMessage/GEN_mERFQIsNotOriginal.sql
+22/07/2026 12:04:38 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:38 [FAILED] AppMessage/GEN_mQuatationCreated.sql
+22/07/2026 12:04:38 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:39 [FAILED] AppMessage/GEN_mRFQCreated.sql
+22/07/2026 12:04:39 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:39 [FAILED] CRM001/Form/FS_GSK_ERPP_SK_QuotationLine_M.SQL
+22/07/2026 12:04:39 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:39 [FAILED] CRM001/UET/UET_CRM001.sql
+22/07/2026 12:04:39 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:39 [FAILED] CRM007/Form/FS_GSK_ApproveRFQ.SQL
+22/07/2026 12:04:39 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:39 [FAILED] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotation_M.SQL
+22/07/2026 12:04:39 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:39 [FAILED] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotationLines_M.SQL
+22/07/2026 12:04:39 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:40 [FAILED] CRM007/SP/GEN_ApproveRFQSp.sql
+22/07/2026 12:04:40 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:40 [FAILED] CRM007/SP/GEN_CopyRequestForQuatationSp.sql
+22/07/2026 12:04:40 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:40 [FAILED] CRM007/UET/UET_CRM007.sql
+22/07/2026 12:04:40 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:40 [FAILED] CRM008/Form/FS_GSK_ApproveQuotation.SQL
+22/07/2026 12:04:40 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:40 [FAILED] CRM008/Form/FS_GSK_ERPP_SK_Quotation_M.SQL
+22/07/2026 12:04:40 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:41 [FAILED] CRM008/SP/GEN_ApproveQuotationSp.sql
+22/07/2026 12:04:41 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:41 [FAILED] CRM008/SP/GEN_CopyQuatationSp.sql
+22/07/2026 12:04:41 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:41 [FAILED] CRM008/UET/UET_CRM008.sql
+22/07/2026 12:04:41 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:41 [FAILED] PDM004/Form/FS_GSK_ERPP_Defect_M.SQL
+22/07/2026 12:04:41 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:41 [FAILED] PDM004/Form/FS_GSK_ERPP_LossTime_M.SQL
+22/07/2026 12:04:41 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+
+22/07/2026 12:04:49 [FAILED] AppMessage/GEN_mApproveQuatationCompleted.sql
+22/07/2026 12:04:49 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:50 [FAILED] AppMessage/GEN_mApproveRFQCompleted.sql
+22/07/2026 12:04:50 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:50 [FAILED] AppMessage/GEN_mEQuatationIsNotOriginal.sql
+22/07/2026 12:04:50 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:50 [FAILED] AppMessage/GEN_mERFQIsNotOriginal.sql
+22/07/2026 12:04:50 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:50 [FAILED] AppMessage/GEN_mQuatationCreated.sql
+22/07/2026 12:04:50 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:50 [FAILED] AppMessage/GEN_mRFQCreated.sql
+22/07/2026 12:04:50 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:50 [FAILED] CRM001/Form/FS_GSK_ERPP_SK_QuotationLine_M.SQL
+22/07/2026 12:04:50 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:51 [FAILED] CRM001/UET/UET_CRM001.sql
+22/07/2026 12:04:51 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:51 [FAILED] CRM007/Form/FS_GSK_ApproveRFQ.SQL
+22/07/2026 12:04:51 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:51 [FAILED] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotation_M.SQL
+22/07/2026 12:04:51 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:51 [FAILED] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotationLines_M.SQL
+22/07/2026 12:04:51 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:51 [FAILED] CRM007/SP/GEN_ApproveRFQSp.sql
+22/07/2026 12:04:51 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:52 [FAILED] CRM007/SP/GEN_CopyRequestForQuatationSp.sql
+22/07/2026 12:04:52 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:52 [FAILED] CRM007/UET/UET_CRM007.sql
+22/07/2026 12:04:52 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:52 [FAILED] CRM008/Form/FS_GSK_ApproveQuotation.SQL
+22/07/2026 12:04:52 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:52 [FAILED] CRM008/Form/FS_GSK_ERPP_SK_Quotation_M.SQL
+22/07/2026 12:04:52 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:52 [FAILED] CRM008/SP/GEN_ApproveQuotationSp.sql
+22/07/2026 12:04:52 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:52 [FAILED] CRM008/SP/GEN_CopyQuatationSp.sql
+22/07/2026 12:04:52 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:53 [FAILED] CRM008/UET/UET_CRM008.sql
+22/07/2026 12:04:53 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:53 [FAILED] PDM004/Form/FS_GSK_ERPP_Defect_M.SQL
+22/07/2026 12:04:53 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:04:53 [FAILED] PDM004/Form/FS_GSK_ERPP_LossTime_M.SQL
+22/07/2026 12:04:53 Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Cannot open database "SyteLine_App" requested by the login. The login failed..
+
+22/07/2026 12:05:28 [SUCCESS] AppMessage/GEN_mApproveQuatationCompleted.sql
+22/07/2026 12:05:28 [SUCCESS] AppMessage/GEN_mApproveRFQCompleted.sql
+22/07/2026 12:05:28 [SUCCESS] AppMessage/GEN_mEQuatationIsNotOriginal.sql
+22/07/2026 12:05:28 [SUCCESS] AppMessage/GEN_mERFQIsNotOriginal.sql
+22/07/2026 12:05:29 [SUCCESS] AppMessage/GEN_mQuatationCreated.sql
+22/07/2026 12:05:29 [SUCCESS] AppMessage/GEN_mRFQCreated.sql
+22/07/2026 12:05:29 [SUCCESS] CRM001/Form/FS_GSK_ERPP_SK_QuotationLine_M.SQL
+22/07/2026 12:05:31 [SUCCESS] CRM001/UET/UET_CRM001.sql
+22/07/2026 12:05:31 [SUCCESS] CRM007/Form/FS_GSK_ApproveRFQ.SQL
+22/07/2026 12:05:32 [SUCCESS] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotation_M.SQL
+22/07/2026 12:05:32 [SUCCESS] CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotationLines_M.SQL
+22/07/2026 12:05:32 [SUCCESS] CRM007/SP/GEN_ApproveRFQSp.sql
+22/07/2026 12:05:32 [SUCCESS] CRM007/SP/GEN_CopyRequestForQuatationSp.sql
+22/07/2026 12:05:33 [SUCCESS] CRM007/UET/UET_CRM007.sql
+22/07/2026 12:05:33 [SUCCESS] CRM008/Form/FS_GSK_ApproveQuotation.SQL
+22/07/2026 12:05:33 [SUCCESS] CRM008/Form/FS_GSK_ERPP_SK_Quotation_M.SQL
+22/07/2026 12:05:34 [SUCCESS] CRM008/SP/GEN_ApproveQuotationSp.sql
+22/07/2026 12:05:34 [SUCCESS] CRM008/SP/GEN_CopyQuatationSp.sql
+22/07/2026 12:05:34 [SUCCESS] CRM008/UET/UET_CRM008.sql
+22/07/2026 12:05:34 [SUCCESS] PDM004/Form/FS_GSK_ERPP_Defect_M.SQL
+22/07/2026 12:05:35 [SUCCESS] PDM004/Form/FS_GSK_ERPP_LossTime_M.SQL

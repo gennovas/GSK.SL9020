@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="ERPP_SK_Quotations">
+         <ServerName>ERPP_SK</ServerName>
+         <LabelStringID>oERPP_SK_Quotations</LabelStringID>
+         <RevisionNo>42</RevisionNo>
+         <RevisionDate>2026-07-22T04:55:58</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="employee_mst" Alias="emp" Type="SECONDARY">
+               <ExplicitJoin>emp.emp_num = erp.qt_from</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="ERPP_SK_Quotation" Alias="erp" Type="PRIMARY" />
+            <Table Name="ERPP_CustomerProspectIDOViews" Alias="ERPP_CPIV" Type="SECONDARY">
+               <ExplicitJoin>ERPP_CPIV.custNum = erp.cust_num AND ERPP_CPIV.custType = erp.cust_type</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="ERPP_rfq" Alias="rfq" Type="SECONDARY">
+               <ExplicitJoin>rfq.rfq_num = erp.qt_num AND rfq.rfq_rev = erp.rfq_revision</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="terms_mst" Alias="terprod" Type="SECONDARY">
+               <ExplicitJoin>terprod.terms_code = erp.term_products</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="terms_mst" Alias="tertool" Type="SECONDARY">
+               <ExplicitJoin>tertool.terms_code = erp.term_tooling</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="UserDefinedTypeValues" Alias="UDTVNF" Type="SECONDARY">
+               <ExplicitJoin>UDTVNF.TypeName = 'ERPP_Namefrom' AND UDTVNF.Value = erp.name_from</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="UserDefinedTypeValues" Alias="UDTVPK" Type="SECONDARY">
+               <ExplicitJoin>UDTVPK.Value = erp.packing AND UDTVPK.TypeName='ERPP_Packing'</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="UserDefinedTypeValues" Alias="UDTVRM" Type="SECONDARY">
+               <ExplicitJoin>UDTVRM.TypeName = 'ERPP_Remark' AND UDTVRM.Value = erp.remark</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="UserDefinedTypeValues" Alias="UDTVTF" Type="SECONDARY">
+               <ExplicitJoin>UDTVTF.Value = erp.title_from AND UDTVTF.TypeName = 'ERPP_Titlefrom'</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+         </Tables>
+         <Methods>
+            <Method Name="GEN_ApproveQuotationSp" Transactional="YES" Type="CustomLoad">
+               <StoredProcedure>GEN_ApproveQuotationSp</StoredProcedure>
+               <MethodType>1</MethodType>
+               <Parameters>
+                  <Parameter Name="Approveby" Sequence="3">
+                     <DBDataType Length="30" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Infobar" Sequence="4">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="QuotationNum" Sequence="1">
+                     <DBDataType Length="15" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="RfqRevision" Sequence="2">
+                     <DBDataType Length="3" Scale="0">BYTE</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties>
+                  <Property Sequence="1">qt_num</Property>
+                  <Property Sequence="2">rfq_revision</Property>
+                  <Property Sequence="3">Uf_ApprovedBy</Property>
+                  <Property Sequence="4">Uf_ApprovedDate</Property>
+               </ResultSetProperties>
+            </Method>
+            <Method Name="GEN_CopyQuatationSp" Transactional="YES">
+               <StoredProcedure>GEN_CopyQuatationSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="Infobar" Sequence="1">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+         </Methods>
+         <Properties>
+            <Property Name="CPIV_custContactName" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custContactName</BoundToColumn>
+               <ColumnTableAlias>ERPP_CPIV</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CPIV_custName" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custName</BoundToColumn>
+               <ColumnTableAlias>ERPP_CPIV</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>NameType</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreateDate" Key="0" Binding="BOUND" Sequence="27">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreateDate</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreatedBy" Key="0" Binding="BOUND" Sequence="25">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreatedBy</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="curr_code" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>curr_code</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrCodeType</ColumnDataType>
+                  <DataLength>3</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cust_num" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cust_num</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CustNumType</ColumnDataType>
+                  <DataLength>7</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cust_seq" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cust_seq</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CustSeqType</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cust_type" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cust_type</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>4</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="eff_date" Key="0" Binding="BOUND" Sequence="18">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>eff_date</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="exch_rate" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>exch_rate</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>ExchRateType</ColumnDataType>
+                  <DataDecimalPos>7</DataDecimalPos>
+                  <DataLength>12</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InWorkflow" Key="0" Binding="BOUND" Sequence="21">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InWorkflow</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+                  <IsRORecordFlag>1</IsRORecordFlag>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="name_from" Key="0" Binding="BOUND" Sequence="19">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>name_from</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>5</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NoteExistsFlag" Key="0" Binding="BOUND" Sequence="22">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NoteExistsFlag</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="packing" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>packing</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="payment_method" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>payment_method</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>10</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="prices_base_on" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>prices_base_on</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="qt_cc" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>qt_cc</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>ContactType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="qt_date" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>qt_date</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="qt_from" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>qt_from</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>EmpNumType</ColumnDataType>
+                  <DataLength>7</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="qt_fromDesc" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>name</BoundToColumn>
+               <ColumnTableAlias>emp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>EmpNameType</ColumnDataType>
+                  <DataLength>35</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="qt_num" Key="1" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>qt_num</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>15</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="qt_stat" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>qt_stat</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>4</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="23">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="remark" Key="0" Binding="BOUND" Sequence="17">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>remark</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_num" Key="0" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_num</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>15</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_revision" Key="2" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_revision</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_Uf_ERPP_PTTooling" Key="0" Binding="BOUND" Sequence="25">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_ERPP_PTTooling</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>100</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>0</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="24">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="term_products" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>term_products</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>6</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="term_tooling" Key="0" Binding="BOUND" Sequence="16">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>term_tooling</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>6</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="terprod_desc" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>description</BoundToColumn>
+               <ColumnTableAlias>terprod</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="tertool_desc" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>description</BoundToColumn>
+               <ColumnTableAlias>tertool</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="title_from" Key="0" Binding="BOUND" Sequence="20">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>title_from</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>5</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UDFT_PackDesc" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Description</BoundToColumn>
+               <ColumnTableAlias>UDTVPK</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>LongDescType</ColumnDataType>
+                  <DataLength>255</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UDFT_RemarkDesc" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Description</BoundToColumn>
+               <ColumnTableAlias>UDTVRM</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>LongDescType</ColumnDataType>
+                  <DataLength>255</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UDFT_TitleFromDesc" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Description</BoundToColumn>
+               <ColumnTableAlias>UDTVTF</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>LongDescType</ColumnDataType>
+                  <DataLength>255</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UDTV_NameFromDesc" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Description</BoundToColumn>
+               <ColumnTableAlias>UDTVNF</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>LongDescType</ColumnDataType>
+                  <DataLength>255</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_Approved" Key="0" Binding="BOUND" Sequence="36">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_Approved</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_ApprovedBy" Key="0" Binding="BOUND" Sequence="37">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_ApprovedBy</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>200</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_ApprovedDate" Key="0" Binding="BOUND" Sequence="38">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_ApprovedDate</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>datetime</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_UnitCode3" Key="0" Binding="BOUND" Sequence="42">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_UnitCode3</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>4</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UpdatedBy" Key="0" Binding="BOUND" Sequence="26">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>UpdatedBy</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>

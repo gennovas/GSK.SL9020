@@ -1,0 +1,13 @@
+{
+  "ServerName": "SERVER_ERP_SKD",
+  "DatabaseName": "SKP_TEST_Forms",
+  "SQLUser": "sa",
+  "SQLPassword": "#logic1122",
+  "Files": [
+      "CRM001/Form/FS_GSK_ERPP_SK_QuotationLine_M.SQL",
+      "CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotation_M.SQL",
+      "CRM007/Form/FS_GSK_ERPP_SK_RequestForQuotationLines_M.SQL",
+      "CRM008/Form/FS_GSK_ERPP_SK_Quotation_M.SQL",
+      "CRR004/Form/FS_GSK_ERPP_SK_RequestForQuotationReport_M.SQL"
+  ]
+}

@@ -1,0 +1,1555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="ERPP_rfqitems">
+         <ServerName>ERPP</ServerName>
+         <LabelStringID>oERPP_rfqitems</LabelStringID>
+         <RevisionNo>13</RevisionNo>
+         <RevisionDate>2026-07-22T10:09:47</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="ERPP_rfq" Alias="rfq" Type="SECONDARY">
+               <ExplicitJoin>rfq.rfq_num = rfqitem.rfq_num AND rfq.rfq_rev = rfqitem.rfq_rev</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="ERPP_rfqitem" Alias="rfqitem" Type="PRIMARY" />
+         </Tables>
+         <Methods />
+         <Properties>
+            <Property Name="amortized_qty" Key="0" Binding="BOUND" Sequence="89">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>amortized_qty</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="amortized_tooling" Key="0" Binding="BOUND" Sequence="88">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>amortized_tooling</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="application_text" Key="0" Binding="BOUND" Sequence="28">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>application_text</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="color" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>color</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="comp_part1" Key="0" Binding="BOUND" Sequence="82">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>comp_part1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="comp_part2" Key="0" Binding="BOUND" Sequence="83">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>comp_part2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="comp_part3" Key="0" Binding="BOUND" Sequence="84">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>comp_part3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="comp_part4" Key="0" Binding="BOUND" Sequence="85">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>comp_part4</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="comp_part5" Key="0" Binding="BOUND" Sequence="86">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>comp_part5</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="competitor_name" Key="0" Binding="BOUND" Sequence="27">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>competitor_name</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="conclusion" Key="0" Binding="BOUND" Sequence="51">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>conclusion</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cost_down" Key="0" Binding="BOUND" Sequence="25">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cost_down</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>100</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreateDate" Key="0" Binding="BOUND" Sequence="96">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreateDate</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreatedBy" Key="0" Binding="BOUND" Sequence="94">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreatedBy</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="curr_code" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>curr_code</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrCodeType</ColumnDataType>
+                  <DataLength>3</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cust_part_num" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cust_part_num</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DerSumInterestIndexPoint" Binding="DERIVED" Sequence="0">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>ISNULL(index_s1,0)+ISNULL(index_s2,0)+ISNULL(index_s3,0)+ISNULL(index_s4,0)+ISNULL(index_s5,0)+ISNULL(index_s6,0)+ISNULL(index_s7,0)+ISNULL(index_s8,0)+ISNULL(index_s9,0)+ISNULL(index_s10,0)</Expression>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="EAU" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>EAU</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="hardness" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>hardness</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="inco_term1" Key="0" Binding="BOUND" Sequence="76">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>inco_term1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="inco_term2" Key="0" Binding="BOUND" Sequence="77">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>inco_term2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="inco_term3" Key="0" Binding="BOUND" Sequence="78">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>inco_term3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="inco_term4" Key="0" Binding="BOUND" Sequence="79">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>inco_term4</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="inco_term5" Key="0" Binding="BOUND" Sequence="80">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>inco_term5</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s1" Key="0" Binding="BOUND" Sequence="31">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s10" Key="0" Binding="BOUND" Sequence="49">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s10</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s2" Key="0" Binding="BOUND" Sequence="33">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s3" Key="0" Binding="BOUND" Sequence="35">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s4" Key="0" Binding="BOUND" Sequence="37">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s4</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s5" Key="0" Binding="BOUND" Sequence="39">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s5</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s6" Key="0" Binding="BOUND" Sequence="41">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s6</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s7" Key="0" Binding="BOUND" Sequence="43">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s7</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s8" Key="0" Binding="BOUND" Sequence="45">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s8</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_s9" Key="0" Binding="BOUND" Sequence="47">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_s9</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>smallint</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t1" Key="0" Binding="BOUND" Sequence="32">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t10" Key="0" Binding="BOUND" Sequence="50">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t10</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t2" Key="0" Binding="BOUND" Sequence="34">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t3" Key="0" Binding="BOUND" Sequence="36">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t4" Key="0" Binding="BOUND" Sequence="38">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t4</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t5" Key="0" Binding="BOUND" Sequence="40">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t5</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t6" Key="0" Binding="BOUND" Sequence="42">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t6</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t7" Key="0" Binding="BOUND" Sequence="44">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t7</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t8" Key="0" Binding="BOUND" Sequence="46">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t8</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="index_t9" Key="0" Binding="BOUND" Sequence="48">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>index_t9</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth1" Key="0" Binding="BOUND" Sequence="67">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth2" Key="0" Binding="BOUND" Sequence="68">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth3" Key="0" Binding="BOUND" Sequence="69">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth4" Key="0" Binding="BOUND" Sequence="70">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth4</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth5" Key="0" Binding="BOUND" Sequence="71">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth5</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth6" Key="0" Binding="BOUND" Sequence="72">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth6</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth6_text" Key="0" Binding="BOUND" Sequence="73">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth6_text</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth7" Key="0" Binding="BOUND" Sequence="74">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth7</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="infor_atth7_text" Key="0" Binding="BOUND" Sequence="75">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>infor_atth7_text</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="issued_by" Key="0" Binding="BOUND" Sequence="90">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>issued_by</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>EmpNumType</ColumnDataType>
+                  <DataLength>7</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="lot_per_month" Key="0" Binding="BOUND" Sequence="17">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>lot_per_month</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="mass_production_date" Key="0" Binding="BOUND" Sequence="23">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>mass_production_date</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="material" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>material</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="model_life" Key="0" Binding="BOUND" Sequence="18">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>model_life</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="new_model" Key="0" Binding="BOUND" Sequence="21">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>new_model</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="no_of_comp_part" Key="0" Binding="BOUND" Sequence="81">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>no_of_comp_part</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="package_detail" Key="0" Binding="BOUND" Sequence="87">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>package_detail</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>100</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="part_name" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>part_name</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="problem_text" Key="0" Binding="BOUND" Sequence="30">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>problem_text</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="92">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="ref_rev" Key="0" Binding="BOUND" Sequence="91">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>ref_rev</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="remarks" Key="0" Binding="BOUND" Sequence="92">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>remarks</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>1000</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_line" Key="3" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_line</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_line_rev" Key="4" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_line_rev</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_num" Key="1" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_num</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>15</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_rev" Key="2" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_rev</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="93">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="since" Key="0" Binding="BOUND" Sequence="19">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>since</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="size" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>size</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="status" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>status</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="supplier" Key="0" Binding="BOUND" Sequence="26">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>supplier</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>100</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="target_price" Key="0" Binding="BOUND" Sequence="24">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>target_price</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_cost1" Key="0" Binding="BOUND" Sequence="56">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_cost1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_cost2" Key="0" Binding="BOUND" Sequence="61">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_cost2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_cost3" Key="0" Binding="BOUND" Sequence="66">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_cost3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_method1" Key="0" Binding="BOUND" Sequence="53">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_method1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_method2" Key="0" Binding="BOUND" Sequence="58">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_method2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_method3" Key="0" Binding="BOUND" Sequence="63">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_method3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_topic1" Key="0" Binding="BOUND" Sequence="52">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_topic1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_topic2" Key="0" Binding="BOUND" Sequence="57">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_topic2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_topic3" Key="0" Binding="BOUND" Sequence="62">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_topic3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_value1" Key="0" Binding="BOUND" Sequence="54">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_value1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_value2" Key="0" Binding="BOUND" Sequence="59">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_value2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="test_value3" Key="0" Binding="BOUND" Sequence="64">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>test_value3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="tested_by1" Key="0" Binding="BOUND" Sequence="55">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>tested_by1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="tested_by2" Key="0" Binding="BOUND" Sequence="60">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>tested_by2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="tested_by3" Key="0" Binding="BOUND" Sequence="65">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>tested_by3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_Approved" Key="0" Binding="BOUND" Sequence="26">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_Approved</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="until" Key="0" Binding="BOUND" Sequence="20">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>until</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="update_and_clear" Key="0" Binding="BOUND" Sequence="22">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>update_and_clear</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UpdatedBy" Key="0" Binding="BOUND" Sequence="95">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>UpdatedBy</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="vol1" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>vol1</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="vol2" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>vol2</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="vol3" Key="0" Binding="BOUND" Sequence="16">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>vol3</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AmountType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="volume" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>volume</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="warning_text" Key="0" Binding="BOUND" Sequence="29">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>warning_text</BoundToColumn>
+               <ColumnTableAlias>rfqitem</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+      <IDODefinition Name="ERPP_rfqs">
+         <ServerName>ERPP</ServerName>
+         <LabelStringID>oERPP_rfqs</LabelStringID>
+         <RevisionNo>21</RevisionNo>
+         <RevisionDate>2026-07-22T07:18:03</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="ERPP_CustomerProspectContactViews" Alias="contViews" Type="SECONDARY">
+               <ExplicitJoin>contViews.contactID = rfq.decision_maker AND contViews.contactType = 'P'</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="ERPP_CustomerProspectIDOViews" Alias="cust" Type="SECONDARY">
+               <ExplicitJoin>LTRIM(cust.custNum) =  LTRIM(rfq.cust_num) AND cust.custType = rfq.cust_type</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="custaddr_mst" Alias="decisionMaker" Type="SECONDARY">
+               <ExplicitJoin>LTRIM(decisionMaker.cust_num) = LTRIM(rfq.decision_maker) AND decisionMaker.cust_seq = 0
+</ExplicitJoin>
+               <JoinType>LEFT OUTER</JoinType>
+            </Table>
+            <Table Name="ERPP_rfq" Alias="rfq" Type="PRIMARY" />
+         </Tables>
+         <Methods>
+            <Method Name="GEN_ApproveRFQSp" Transactional="YES" Type="CustomLoad">
+               <StoredProcedure>GEN_ApproveRFQSp</StoredProcedure>
+               <MethodType>1</MethodType>
+               <Parameters>
+                  <Parameter Name="Approveby" Sequence="3">
+                     <DBDataType Length="30" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Infobar" Sequence="4">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="RFQNum" Sequence="1">
+                     <DBDataType Length="15" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="RfqRevision" Sequence="2">
+                     <DBDataType Length="3" Scale="0">BYTE</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties>
+                  <Property Sequence="1">rfq_num</Property>
+                  <Property Sequence="2">rfq_rev</Property>
+                  <Property Sequence="3">Uf_ApprovedBy</Property>
+                  <Property Sequence="4">Uf_ApprovedDate</Property>
+               </ResultSetProperties>
+            </Method>
+            <Method Name="GEN_CopyRequestForQuatationSp" Transactional="YES">
+               <StoredProcedure>GEN_CopyRequestForQuatationSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="Infobar" Sequence="1">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+         </Methods>
+         <Properties>
+            <Property Name="CreateDate" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreateDate</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreatedBy" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreatedBy</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="curr_code" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>curr_code</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrCodeType</ColumnDataType>
+                  <DataLength>3</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cust_num" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cust_num</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CustNumType</ColumnDataType>
+                  <DataLength>7</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cust_seq" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cust_seq</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CustSeqType</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="cust_type" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cust_type</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custAddr1" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custAddr1</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AddressType</ColumnDataType>
+                  <DataLength>50</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custAddr2" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custAddr2</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AddressType</ColumnDataType>
+                  <DataLength>50</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custAddr3" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custAddr3</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AddressType</ColumnDataType>
+                  <DataLength>50</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custAddr4" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custAddr4</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>AddressType</ColumnDataType>
+                  <DataLength>50</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custBusinessType" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custBusinessType</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>5</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custCity" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custCity</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CityType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custContactName" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custContactName</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custCountry" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custCountry</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CountryType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custEmail" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custEmail</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custName" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custName</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>NameType</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custPaymentMethod" Key="0" Binding="BOUND" Sequence="16">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custPaymentMethod</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>5</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custPhone" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custPhone</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>PhoneType</ColumnDataType>
+                  <DataLength>25</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custProductPaymentTerm" Key="0" Binding="BOUND" Sequence="17">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custProductPaymentTerm</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>3</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custProductTermDesc" Key="0" Binding="BOUND" Sequence="19">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custProductTermDesc</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custState" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custState</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>StateType</ColumnDataType>
+                  <DataLength>5</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custToolingPaymentTerm" Key="0" Binding="BOUND" Sequence="18">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custToolingPaymentTerm</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>3</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custToolingTermDesc" Key="0" Binding="BOUND" Sequence="20">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custToolingTermDesc</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="custZip" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>custZip</BoundToColumn>
+               <ColumnTableAlias>cust</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>PostalCodeType</ColumnDataType>
+                  <DataLength>10</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="decision_maker" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>decision_maker</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CustNumType</ColumnDataType>
+                  <DataLength>7</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="decisionMakerName" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>contactName</BoundToColumn>
+               <ColumnTableAlias>contViews</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>31</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DerCustContact" Binding="DERIVED" Sequence="0">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>CASE WHEN cust_type = 'P' THEN decisionMakerName 
+WHEN cust_type = 'C' THEN custContactName
+ELSE ''
+END</Expression>
+               <PropertyAttributes>
+                  <ColumnDataType>NameType</ColumnDataType>
+                  <DataLength>60</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="issue_by" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>issue_by</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>EmpNumType</ColumnDataType>
+                  <DataLength>7</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="issue_date" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>issue_date</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="plant" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>plant</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="ref_rev" Key="0" Binding="BOUND" Sequence="17">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>ref_rev</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_num" Key="1" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_num</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>15</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_rev" Key="2" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_rev</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="rfq_source" Key="0" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>rfq_source</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="sale_type" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>sale_type</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="ship_addr" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>ship_addr</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>500</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="status" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>status</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="submit_date" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>submit_date</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="type" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>type</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>2</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_Approved" Key="0" Binding="BOUND" Sequence="26">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_Approved</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+                  <LabelStringID>Approved</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_ApprovedBy" Key="0" Binding="BOUND" Sequence="27">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_ApprovedBy</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>200</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+                  <LabelStringID>Approved by</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Uf_ApprovedDate" Key="0" Binding="BOUND" Sequence="28">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Uf_ApprovedDate</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>datetime</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <DateFormat>B</DateFormat>
+                  <IsReadOnly>1</IsReadOnly>
+                  <LabelStringID>Approved Date</LabelStringID>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UpdatedBy" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>UpdatedBy</BoundToColumn>
+               <ColumnTableAlias>rfq</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>
