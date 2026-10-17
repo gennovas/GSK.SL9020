@@ -1,0 +1,10 @@
+{
+  "ServerName": "SERVER_ERP_SKD",
+  "DatabaseName": "SKP_TEST_Forms",
+  "SQLUser": "sa",
+  "SQLPassword": "#logic1122",
+  "Files": [
+      "CRM004/Form/FS_GSK_ERPP_ExpKQIForSalesTransactionDetail_M.SQL",
+      "CRR003/Form/FS_GSK_ERPP_ExpKQIForSalesReport_M.SQL"
+  ]
+}

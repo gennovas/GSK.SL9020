@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="ERPP_ExpKQIAutomotivePlantDetailViews">
+         <ServerName>ERPP_FINANCE</ServerName>
+         <LabelStringID>oERPP_ExpKQIAutomotivePlantDetailViews</LabelStringID>
+         <RevisionNo>4</RevisionNo>
+         <RevisionDate>2026-08-11T08:50:35</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="ERPP_ExpKQIAutomotivePlantDetailView" Alias="v" Type="PRIMARY" />
+         </Tables>
+         <Methods />
+         <Properties>
+            <Property Name="BU" Binding="DERIVED" Sequence="0">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>(
+CASE DocType
+     WHEN 'I' THEN ( SELECT TOP 1 '' FROM inv_hdr i WHERE i.inv_seq = 0 AND i.inv_num = InvNum )
+     WHEN 'D' THEN ( SELECT TOP 1 Uf_BU FROM co WHERE co.co_num = CoNum )
+     WHEN 'Q' THEN ( SELECT TOP 1 Uf_UnitCode3 FROM ERPP_SK_Quotation q WHERE q.rfq_revision = 0 AND q.qt_num = InvNum  )
+     ELSE ''
+END
+)</Expression>
+               <PropertyAttributes>
+                  <DataLength>15</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CoLine" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CoLine</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CoLineType</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CoNum" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CoNum</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>15</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CoRelease" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CoRelease</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CustNum" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CustNum</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CustNumType</ColumnDataType>
+                  <DataLength>7</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CustOverseas" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CustOverseas</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CustRegisterDate" Key="0" Binding="BOUND" Sequence="20">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CustRegisterDate</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CustSlsman" Key="0" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CustSlsman</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>SlsmanType</ColumnDataType>
+                  <DataLength>8</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CustType" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CustType</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CustTypeType</ColumnDataType>
+                  <DataLength>6</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DocType" Key="0" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>DocType</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>varchar</ColumnDataType>
+                  <DataLength>1</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InvAmount" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InvAmount</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>decimal</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>24</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InvAmtIncVat" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InvAmtIncVat</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>decimal</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InvDate" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InvDate</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>datetime</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InvNum" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InvNum</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>15</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InvVat" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InvVat</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>decimal</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Item" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Item</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="ItemRegisterDate" Key="0" Binding="BOUND" Sequence="21">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>ItemRegisterDate</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NetAmount" Key="0" Binding="BOUND" Sequence="18">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NetAmount</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>numeric</ColumnDataType>
+                  <DataDecimalPos>6</DataDecimalPos>
+                  <DataLength>38</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NetAmountNonDisc" Key="0" Binding="BOUND" Sequence="17">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NetAmountNonDisc</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>decimal</ColumnDataType>
+                  <DataDecimalPos>6</DataDecimalPos>
+                  <DataLength>38</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NewCustomer" Key="0" Binding="BOUND" Sequence="22">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NewCustomer</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NewItem" Key="0" Binding="BOUND" Sequence="23">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NewItem</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Price" Key="0" Binding="BOUND" Sequence="16">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Price</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>decimal</ColumnDataType>
+                  <DataDecimalPos>15</DataDecimalPos>
+                  <DataLength>31</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="QtyInvoiced" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>QtyInvoiced</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>decimal</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>23</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="SiteRef" Key="0" Binding="BOUND" Sequence="24">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>SiteRef</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>8</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Whse" Key="0" Binding="BOUND" Sequence="19">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>Whse</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>4</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>

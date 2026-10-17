@@ -1,0 +1,1816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="ERPP_ExportLines">
+         <ServerName>ERPP_FINANCE</ServerName>
+         <LabelStringID>oERPP_ExportLines</LabelStringID>
+         <RevisionNo>4</RevisionNo>
+         <RevisionDate>2026-08-11T09:11:35</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="erpp_export_line" Alias="l" Type="PRIMARY" />
+         </Tables>
+         <Methods>
+            <Method Name="ERPP_ExpKQIAutomotivePlantDeleteTmpSp" Transactional="NO">
+               <StoredProcedure>ERPP_ExpKQIAutomotivePlantDeleteTmpSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="pSessionID" Sequence="1">
+                     <DBDataType Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+            <Method Name="ERPP_ExpKQIAutomotivePlantPostingSp" Transactional="NO">
+               <StoredProcedure>ERPP_ExpKQIAutomotivePlantPostingSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="Infobar" Sequence="11">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustLocalOverseas" Sequence="9">
+                     <DBDataType Length="2" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustNewCurrRegis" Sequence="10">
+                     <DBDataType Length="2" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustNumEnding" Sequence="6">
+                     <DBDataType Length="7" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustNumStarting" Sequence="5">
+                     <DBDataType Length="7" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustTypeEnding" Sequence="8">
+                     <DBDataType Length="6" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustTypeStarting" Sequence="7">
+                     <DBDataType Length="6" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pSessionID" Sequence="1">
+                     <DBDataType Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pSlsManEnding" Sequence="4">
+                     <DBDataType Length="8" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pSlsManStarting" Sequence="3">
+                     <DBDataType Length="8" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pYear" Sequence="2">
+                     <DBDataType Length="10" Scale="0">LONG</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+            <Method Name="GEN_ExpKQIAutomotivePlantPostingSp" Transactional="NO">
+               <StoredProcedure>GEN_ExpKQIAutomotivePlantPostingSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="BU" Sequence="12">
+                     <DBDataType Length="15" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Infobar" Sequence="11">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustLocalOverseas" Sequence="9">
+                     <DBDataType Length="2" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustNewCurrRegis" Sequence="10">
+                     <DBDataType Length="2" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustNumEnding" Sequence="6">
+                     <DBDataType Length="7" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustNumStarting" Sequence="5">
+                     <DBDataType Length="7" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustTypeEnding" Sequence="8">
+                     <DBDataType Length="6" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pCustTypeStarting" Sequence="7">
+                     <DBDataType Length="6" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pSessionID" Sequence="1">
+                     <DBDataType Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pSlsManEnding" Sequence="4">
+                     <DBDataType Length="8" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pSlsManStarting" Sequence="3">
+                     <DBDataType Length="8" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="pYear" Sequence="2">
+                     <DBDataType Length="10" Scale="0">LONG</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+         </Methods>
+         <Properties>
+            <Property Name="col001" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col001</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col002" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col002</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col003" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col003</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col004" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col004</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col005" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col005</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col006" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col006</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col007" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col007</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col008" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col008</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col009" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col009</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col010" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col010</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col011" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col011</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col012" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col012</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col013" Key="0" Binding="BOUND" Sequence="16">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col013</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col014" Key="0" Binding="BOUND" Sequence="17">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col014</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col015" Key="0" Binding="BOUND" Sequence="18">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col015</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col016" Key="0" Binding="BOUND" Sequence="19">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col016</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col017" Key="0" Binding="BOUND" Sequence="20">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col017</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col018" Key="0" Binding="BOUND" Sequence="21">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col018</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col019" Key="0" Binding="BOUND" Sequence="22">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col019</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col020" Key="0" Binding="BOUND" Sequence="23">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col020</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col021" Key="0" Binding="BOUND" Sequence="24">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col021</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col022" Key="0" Binding="BOUND" Sequence="25">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col022</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col023" Key="0" Binding="BOUND" Sequence="26">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col023</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col024" Key="0" Binding="BOUND" Sequence="27">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col024</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col025" Key="0" Binding="BOUND" Sequence="28">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col025</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col026" Key="0" Binding="BOUND" Sequence="29">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col026</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col027" Key="0" Binding="BOUND" Sequence="30">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col027</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col028" Key="0" Binding="BOUND" Sequence="31">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col028</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col029" Key="0" Binding="BOUND" Sequence="32">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col029</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col030" Key="0" Binding="BOUND" Sequence="33">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col030</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col031" Key="0" Binding="BOUND" Sequence="34">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col031</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col032" Key="0" Binding="BOUND" Sequence="35">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col032</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col033" Key="0" Binding="BOUND" Sequence="36">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col033</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col034" Key="0" Binding="BOUND" Sequence="37">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col034</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col035" Key="0" Binding="BOUND" Sequence="38">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col035</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col036" Key="0" Binding="BOUND" Sequence="39">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col036</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col037" Key="0" Binding="BOUND" Sequence="40">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col037</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col038" Key="0" Binding="BOUND" Sequence="41">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col038</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col039" Key="0" Binding="BOUND" Sequence="42">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col039</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col040" Key="0" Binding="BOUND" Sequence="43">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col040</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col041" Key="0" Binding="BOUND" Sequence="44">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col041</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col042" Key="0" Binding="BOUND" Sequence="45">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col042</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col043" Key="0" Binding="BOUND" Sequence="46">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col043</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col044" Key="0" Binding="BOUND" Sequence="47">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col044</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col045" Key="0" Binding="BOUND" Sequence="48">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col045</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col046" Key="0" Binding="BOUND" Sequence="49">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col046</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col047" Key="0" Binding="BOUND" Sequence="50">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col047</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col048" Key="0" Binding="BOUND" Sequence="51">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col048</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col049" Key="0" Binding="BOUND" Sequence="52">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col049</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col050" Key="0" Binding="BOUND" Sequence="53">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col050</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col051" Key="0" Binding="BOUND" Sequence="54">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col051</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col052" Key="0" Binding="BOUND" Sequence="55">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col052</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col053" Key="0" Binding="BOUND" Sequence="56">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col053</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col054" Key="0" Binding="BOUND" Sequence="57">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col054</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col055" Key="0" Binding="BOUND" Sequence="58">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col055</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col056" Key="0" Binding="BOUND" Sequence="59">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col056</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col057" Key="0" Binding="BOUND" Sequence="60">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col057</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col058" Key="0" Binding="BOUND" Sequence="61">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col058</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col059" Key="0" Binding="BOUND" Sequence="62">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col059</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col060" Key="0" Binding="BOUND" Sequence="63">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col060</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col061" Key="0" Binding="BOUND" Sequence="64">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col061</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col062" Key="0" Binding="BOUND" Sequence="65">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col062</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col063" Key="0" Binding="BOUND" Sequence="66">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col063</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col064" Key="0" Binding="BOUND" Sequence="67">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col064</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col065" Key="0" Binding="BOUND" Sequence="68">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col065</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col066" Key="0" Binding="BOUND" Sequence="69">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col066</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col067" Key="0" Binding="BOUND" Sequence="70">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col067</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col068" Key="0" Binding="BOUND" Sequence="71">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col068</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col069" Key="0" Binding="BOUND" Sequence="72">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col069</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col070" Key="0" Binding="BOUND" Sequence="73">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col070</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col071" Key="0" Binding="BOUND" Sequence="74">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col071</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col072" Key="0" Binding="BOUND" Sequence="75">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col072</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col073" Key="0" Binding="BOUND" Sequence="76">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col073</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col074" Key="0" Binding="BOUND" Sequence="77">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col074</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col075" Key="0" Binding="BOUND" Sequence="78">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col075</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col076" Key="0" Binding="BOUND" Sequence="79">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col076</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col077" Key="0" Binding="BOUND" Sequence="80">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col077</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col078" Key="0" Binding="BOUND" Sequence="81">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col078</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col079" Key="0" Binding="BOUND" Sequence="82">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col079</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col080" Key="0" Binding="BOUND" Sequence="83">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col080</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col081" Key="0" Binding="BOUND" Sequence="84">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col081</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col082" Key="0" Binding="BOUND" Sequence="85">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col082</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col083" Key="0" Binding="BOUND" Sequence="86">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col083</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col084" Key="0" Binding="BOUND" Sequence="87">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col084</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col085" Key="0" Binding="BOUND" Sequence="88">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col085</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col086" Key="0" Binding="BOUND" Sequence="89">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col086</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col087" Key="0" Binding="BOUND" Sequence="90">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col087</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col088" Key="0" Binding="BOUND" Sequence="91">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col088</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col089" Key="0" Binding="BOUND" Sequence="92">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col089</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col090" Key="0" Binding="BOUND" Sequence="93">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col090</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col091" Key="0" Binding="BOUND" Sequence="94">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col091</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col092" Key="0" Binding="BOUND" Sequence="95">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col092</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col093" Key="0" Binding="BOUND" Sequence="96">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col093</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col094" Key="0" Binding="BOUND" Sequence="97">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col094</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col095" Key="0" Binding="BOUND" Sequence="98">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col095</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col096" Key="0" Binding="BOUND" Sequence="99">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col096</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col097" Key="0" Binding="BOUND" Sequence="100">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col097</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col098" Key="0" Binding="BOUND" Sequence="101">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col098</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col099" Key="0" Binding="BOUND" Sequence="102">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col099</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col100" Key="0" Binding="BOUND" Sequence="103">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col100</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col101" Key="0" Binding="BOUND" Sequence="104">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col101</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col102" Key="0" Binding="BOUND" Sequence="105">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col102</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col103" Key="0" Binding="BOUND" Sequence="106">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col103</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col104" Key="0" Binding="BOUND" Sequence="107">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col104</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col105" Key="0" Binding="BOUND" Sequence="108">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col105</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col106" Key="0" Binding="BOUND" Sequence="109">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col106</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col107" Key="0" Binding="BOUND" Sequence="110">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col107</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col108" Key="0" Binding="BOUND" Sequence="111">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col108</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col109" Key="0" Binding="BOUND" Sequence="112">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col109</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col110" Key="0" Binding="BOUND" Sequence="113">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col110</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col111" Key="0" Binding="BOUND" Sequence="114">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col111</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col112" Key="0" Binding="BOUND" Sequence="115">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col112</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col113" Key="0" Binding="BOUND" Sequence="116">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col113</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col114" Key="0" Binding="BOUND" Sequence="117">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col114</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col115" Key="0" Binding="BOUND" Sequence="118">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col115</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col116" Key="0" Binding="BOUND" Sequence="119">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col116</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col117" Key="0" Binding="BOUND" Sequence="120">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col117</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col118" Key="0" Binding="BOUND" Sequence="121">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col118</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col119" Key="0" Binding="BOUND" Sequence="122">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col119</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col120" Key="0" Binding="BOUND" Sequence="123">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col120</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col121" Key="0" Binding="BOUND" Sequence="124">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col121</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col122" Key="0" Binding="BOUND" Sequence="125">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col122</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col123" Key="0" Binding="BOUND" Sequence="126">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col123</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col124" Key="0" Binding="BOUND" Sequence="127">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col124</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col125" Key="0" Binding="BOUND" Sequence="128">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col125</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col126" Key="0" Binding="BOUND" Sequence="129">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col126</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col127" Key="0" Binding="BOUND" Sequence="130">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col127</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col128" Key="0" Binding="BOUND" Sequence="131">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col128</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col129" Key="0" Binding="BOUND" Sequence="132">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col129</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col130" Key="0" Binding="BOUND" Sequence="133">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col130</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col131" Key="0" Binding="BOUND" Sequence="134">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col131</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col132" Key="0" Binding="BOUND" Sequence="135">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col132</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col133" Key="0" Binding="BOUND" Sequence="136">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col133</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col134" Key="0" Binding="BOUND" Sequence="137">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col134</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col135" Key="0" Binding="BOUND" Sequence="138">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col135</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col136" Key="0" Binding="BOUND" Sequence="139">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col136</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col137" Key="0" Binding="BOUND" Sequence="140">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col137</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col138" Key="0" Binding="BOUND" Sequence="141">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col138</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col139" Key="0" Binding="BOUND" Sequence="142">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col139</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col140" Key="0" Binding="BOUND" Sequence="143">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col140</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col141" Key="0" Binding="BOUND" Sequence="144">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col141</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col142" Key="0" Binding="BOUND" Sequence="145">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col142</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col143" Key="0" Binding="BOUND" Sequence="146">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col143</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col144" Key="0" Binding="BOUND" Sequence="147">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col144</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col145" Key="0" Binding="BOUND" Sequence="148">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col145</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col146" Key="0" Binding="BOUND" Sequence="149">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col146</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col147" Key="0" Binding="BOUND" Sequence="150">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col147</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col148" Key="0" Binding="BOUND" Sequence="151">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col148</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col149" Key="0" Binding="BOUND" Sequence="152">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col149</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="col150" Key="0" Binding="BOUND" Sequence="153">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>col150</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreateDate" Key="0" Binding="BOUND" Sequence="160">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreateDate</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreatedBy" Key="0" Binding="BOUND" Sequence="158">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreatedBy</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>128</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="grp001" Key="0" Binding="BOUND" Sequence="161">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>grp001</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="grp002" Key="0" Binding="BOUND" Sequence="162">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>grp002</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="grp003" Key="0" Binding="BOUND" Sequence="163">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>grp003</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="grp004" Key="0" Binding="BOUND" Sequence="164">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>grp004</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="grp005" Key="0" Binding="BOUND" Sequence="165">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>grp005</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>250</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InWorkflow" Key="0" Binding="BOUND" Sequence="154">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InWorkflow</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+                  <IsRORecordFlag>1</IsRORecordFlag>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="line_type" Key="2" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>line_type</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>1</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NoteExistsFlag" Key="0" Binding="BOUND" Sequence="155">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NoteExistsFlag</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="156">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="157">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="seq" Key="3" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>seq</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="SessionId" Key="1" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>SessionId</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UpdatedBy" Key="0" Binding="BOUND" Sequence="159">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>UpdatedBy</BoundToColumn>
+               <ColumnTableAlias>l</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>128</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>

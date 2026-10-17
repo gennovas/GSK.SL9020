@@ -1,0 +1,15 @@
+select Item,
+       isnull(description, '') as Description,
+       100 + abs(checksum(newid())) % 901 as '202601',
+       100 + abs(checksum(newid())) % 901 as '202602',
+       100 + abs(checksum(newid())) % 901 as '202603',
+       100 + abs(checksum(newid())) % 901 as '202604',
+       100 + abs(checksum(newid())) % 901 as '202605',
+       100 + abs(checksum(newid())) % 901 as '202606',
+       100 + abs(checksum(newid())) % 901 as '202607',
+       100 + abs(checksum(newid())) % 901 as '202608',
+       100 + abs(checksum(newid())) % 901 as '202609',
+       100 + abs(checksum(newid())) % 901 as '202610',
+       100 + abs(checksum(newid())) % 901 as '202611',
+       100 + abs(checksum(newid())) % 901 as '202612'
+from item_mst

@@ -1,0 +1,13 @@
+{
+  "ServerName": "192.168.196.222",
+  "DatabaseName": "SKP_S2_App",
+  "SQLUser": "sa",
+  "SQLPassword": "#logic1122",
+  "Files": [
+      "PDM006/Table/Table.sql",
+      "PDM006/View/View.sql",
+      "PDM006/UET/UET_PDM006.sql",
+      "PDM006/UDT/UDT_PDM006.sql",
+      "PDM006/SP/SP.sql"
+  ]
+}

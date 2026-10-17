@@ -1,0 +1,9 @@
+{
+  "ServerName": "SERVER_ERP_SKD",
+  "DatabaseName": "SKP_TEST_App",
+  "SQLUser": "sa",
+  "SQLPassword": "#logic1122",
+  "Files": [
+      "CRR003/SP/GEN_ExpKQIAutomotivePlantPostingSp.sql"
+  ]
+}

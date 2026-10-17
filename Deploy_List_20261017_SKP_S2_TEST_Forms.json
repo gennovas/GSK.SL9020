@@ -1,0 +1,12 @@
+{
+  "ServerName": "192.168.196.222",
+  "DatabaseName": "SKP_S2_Forms",
+  "SQLUser": "sa",
+  "SQLPassword": "#logic1122",
+  "Files": [
+      "PDM006/Form/FS_GSK_ERPP_SK_JobOrders_M.SQL",
+      "PDM006/Form/FS_GSK_QtySendToStore.SQL",
+      "PDM006/Form/FS_GSK_SendToStoreDocument.SQL",
+      "PDM007/Form/FS_GSK_JobReceiptByDocNumber.SQL"
+  ]
+}
