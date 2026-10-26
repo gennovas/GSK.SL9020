@@ -134,7 +134,6 @@
                      <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
                      <INPUT />
                      <OUTPUT />
-                     <MESSAGE />
                      <COMDataType>VARIANT</COMDataType>
                   </Parameter>
                   <Parameter Name="Job" Sequence="4">
@@ -154,6 +153,11 @@
                   </Parameter>
                   <Parameter Name="PrintFlag" Sequence="12">
                      <DBDataType Length="3" Scale="0">BYTE</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="ProcessId" Sequence="15">
+                     <DBDataType Scale="0">VARCHAR</DBDataType>
                      <INPUT />
                      <COMDataType>VARIANT</COMDataType>
                   </Parameter>

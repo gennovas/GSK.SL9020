@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="ERPP_Defects">
+         <ServerName>ERPP</ServerName>
+         <LabelStringID>oERPP_Defects</LabelStringID>
+         <RevisionNo>13</RevisionNo>
+         <RevisionDate>2026-10-24T07:58:28</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="ERPP_Defect" Alias="erp" Type="PRIMARY" />
+         </Tables>
+         <Methods />
+         <Properties>
+            <Property Name="CreateDate" Key="0" Binding="BOUND" Sequence="17">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreateDate</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CreatedBy" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>CreatedBy</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>128</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DefectCode" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>DefectCode</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>ReasonCodeType</ColumnDataType>
+                  <DataLength>3</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DerEndTimeHrs" Key="0" Binding="DERIVED" Sequence="0">
+               <PropertyClass>TimeHours</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>dbo.FmtTimeHrsSp(end_time)</Expression>
+               <PropertyAttributes>
+                  <ColumnDataType>TimeHoursType</ColumnDataType>
+                  <DataDecimalPos>2</DataDecimalPos>
+                  <DataLength>4</DataLength>
+                  <DataType>Decimal</DataType>
+                  <InputMask>Z9.99</InputMask>
+                  <JustifyFormat>R</JustifyFormat>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DerEndTimeMin" Key="0" Binding="DERIVED" Sequence="0">
+               <PropertyClass>ApsTimeStr</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>dbo.FmtTimeMinSp(end_time)</Expression>
+               <PropertyAttributes>
+                  <ColumnDataType>ApsTimeType</ColumnDataType>
+                  <DataType>String</DataType>
+                  <InputMask>##:##</InputMask>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DerStartTimeHrs" Key="0" Binding="DERIVED" Sequence="0">
+               <PropertyClass>TimeHours</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>dbo.FmtTimeHrsSp(start_time)</Expression>
+               <PropertyAttributes>
+                  <ColumnDataType>TimeHoursType</ColumnDataType>
+                  <DataDecimalPos>2</DataDecimalPos>
+                  <DataLength>4</DataLength>
+                  <DataType>Decimal</DataType>
+                  <InputMask>Z9.99</InputMask>
+                  <JustifyFormat>R</JustifyFormat>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DerStartTimeMin" Key="0" Binding="DERIVED" Sequence="0">
+               <PropertyClass>ApsTimeStr</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>dbo.FmtTimeMinSp(start_time)</Expression>
+               <PropertyAttributes>
+                  <ColumnDataType>ApsTimeType</ColumnDataType>
+                  <DataType>String</DataType>
+                  <InputMask>##:##</InputMask>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DetailDefect" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>DetailDefect</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="EndTime" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>end_time</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>TimeSecondsType</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="InWorkflow" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>InWorkflow</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+                  <IsRORecordFlag>1</IsRORecordFlag>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="job" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>job</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>JobType</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="NoteExistsFlag" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>NoteExistsFlag</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>FlagNyType</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="oper_num" Key="0" Binding="BOUND" Sequence="18">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>oper_num</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>OperNumType</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="QtyPCS" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>QtyPCS</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>int</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="StartTime" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>start_time</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>TimeSecondsType</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="suffix" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>suffix</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>SuffixType</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="TotalScrap" Binding="DERIVED" Sequence="0">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>(select ISNULL(SUM(d.QtyPCS),0) from ERPP_Defect d where d.trans_num = trans_num  Group by d.trans_num)</Expression>
+               <PropertyAttributes>
+                  <DataType>Long Integer</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="trans_date" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>trans_date</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DateType</ColumnDataType>
+                  <DataType>Date</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="trans_num" Key="0" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>trans_num</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>HugeTransNumType</ColumnDataType>
+                  <DataDecimalPos>0</DataDecimalPos>
+                  <DataLength>11</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="trans_type" Key="0" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>trans_type</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>JobtranTypeType</ColumnDataType>
+                  <DataLength>1</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="uf_erpp_tt1" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>uf_erpp_tt1</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>100</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="uf_erpp_tt2" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>uf_erpp_tt2</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>100</DataLength>
+                  <DataType>String</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UpdatedBy" Key="0" Binding="BOUND" Sequence="16">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>UpdatedBy</BoundToColumn>
+               <ColumnTableAlias>erp</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>UsernameType</ColumnDataType>
+                  <DataLength>128</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>

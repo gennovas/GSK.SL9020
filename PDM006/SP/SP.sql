@@ -1,4 +1,105 @@
- 
+/****** Object:  StoredProcedure [dbo].[GEN_DeleteSendToStoreDocSp]    Script Date: 26/10/2026 3:18:57 PM ******/
+DROP PROCEDURE [dbo].[GEN_DeleteSendToStoreDocSp]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GEN_CLM_FGSendToStoreLoadSp]    Script Date: 26/10/2026 3:18:57 PM ******/
+DROP PROCEDURE [dbo].[GEN_CLM_FGSendToStoreLoadSp]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GEN_FGSendToStoreProcessSp]    Script Date: 26/10/2026 3:18:57 PM ******/
+DROP PROCEDURE [dbo].[GEN_FGSendToStoreProcessSp]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GEN_FGSendToStoreProcessSp]    Script Date: 26/10/2026 3:18:57 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[GEN_FGSendToStoreProcessSp](
+	@TransNum HugeTransNumType,
+	@Sequence SequenceType,
+	@DocumentDate DateTimeType,
+	@Job JobType,
+	@Suffix SuffixType,
+	@OperNum OperNumType,
+	@PostedQty QtyUnitType,
+	@SentQty QtyUnitType,
+	@ReceivedQty QtyUnitType,
+	@CurSendQty QtyUnitType,
+	@CurReceivedQty QtyUnitType,
+	@PrintFlag ListYesNoType,
+	@DocumentNum DocumentNumType OUTPUT,
+	@Infobar InfobarType OUTPUT,
+	@ProcessId uniqueidentifier
+)
+AS
+
+SET XACT_ABORT ON;
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+DECLARE @FromWhse WhseType,
+	@ToBU nvarchar(10),
+	@Severity INT,
+	@AddDocument INT = 0
+
+--Get Old Document (not print)
+SELECT TOP 1 @DocumentNum = document_num
+FROM GEN_FGSendToStore 
+WHERE job = @Job AND suffix = @Suffix AND process_id = @ProcessId
+
+IF @DocumentNum IS NULL
+BEGIN
+	
+	SET @AddDocument = 1
+
+	SELECT @FromWhse = whse,
+		@ToBU = Uf_BU
+	FROM job WHERE job = @Job AND Suffix = @Suffix
+
+	EXEC	@Severity = [dbo].[GEN_SendToStoreGetDocNumberSp]
+			@FromWhse = @FromWhse,
+			@ToBU = @ToBU,
+			@DocumentDate = @DocumentDate,
+			@DocumentNum = @DocumentNum OUTPUT,
+			@Infobar = @Infobar OUTPUT
+
+	IF @Severity <> 0
+		RETURN @Severity
+END
+
+SELECT @Sequence = MAX ( sequence )
+FROM GEN_FGSendToStore
+WHERE job = @Job AND suffix = @Suffix
+
+SET @Sequence = ISNULL(@Sequence, 0) + 1;
+
+INSERT INTO GEN_FGSendToStore (trans_num, sequence, document_date, job, suffix, oper_num, posted_qty, sent_qty, received_qty, cur_send_qty, cur_received_qty, print_flag, document_num, [process_id])
+VALUES (@TransNum, @Sequence, @DocumentDate, @Job, @Suffix, @OperNum, @PostedQty, @CurSendQty, @ReceivedQty, @CurSendQty, @CurReceivedQty, @PrintFlag, @DocumentNum, @ProcessId)
+
+IF @AddDocument = 1
+	INSERT INTO [dbo].[GEN_Serial] ([document_num]
+		  ,[job]
+		  ,[suffix]
+		  ,[oper_num]
+		  ,[qty]
+		  ,[doc_date] )
+
+	VALUES (@DocumentNum, @Job, @Suffix, @OperNum, @CurSendQty, @DocumentDate)
+
+IF @AddDocument = 0
+	UPDATE [dbo].[GEN_Serial] SET qty = ISNULL(qty, 0) + @CurSendQty
+	WHERE document_num = @DocumentNum
+GO
+
+/****** Object:  StoredProcedure [dbo].[GEN_CLM_FGSendToStoreLoadSp]    Script Date: 26/10/2026 3:18:57 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
 
 CREATE PROCEDURE [dbo].[GEN_CLM_FGSendToStoreLoadSp] (
 	@StartJob		JobType,
@@ -187,7 +288,7 @@ ELSE IF @RefreshOption = 'P'
 		ORDER BY s.job, s.suffix
 GO
 
-/****** Object:  StoredProcedure [dbo].[GEN_DeleteSendToStoreDocSp]    Script Date: 17/10/2026 5:51:23 AM ******/
+/****** Object:  StoredProcedure [dbo].[GEN_DeleteSendToStoreDocSp]    Script Date: 26/10/2026 3:18:57 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -211,155 +312,6 @@ SELECT document_num, job, suffix, oper_num, qty, print_flag, received_qty, doc_d
 FROM GEN_Serial WHERE document_num = @DocumentNum
  
 DELETE GEN_Serial WHERE document_num = @DocumentNum
-GO
-
-/****** Object:  StoredProcedure [dbo].[GEN_FGSendToStoreProcessSp]    Script Date: 17/10/2026 5:51:23 AM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-
-CREATE PROCEDURE [dbo].[GEN_FGSendToStoreProcessSp](
-	@TransNum HugeTransNumType,
-	@Sequence SequenceType,
-	@DocumentDate DateTimeType,
-	@Job JobType,
-	@Suffix SuffixType,
-	@OperNum OperNumType,
-	@PostedQty QtyUnitType,
-	@SentQty QtyUnitType,
-	@ReceivedQty QtyUnitType,
-	@CurSendQty QtyUnitType,
-	@CurReceivedQty QtyUnitType,
-	@PrintFlag ListYesNoType,
-	@DocumentNum DocumentNumType OUTPUT,
-	@Infobar InfobarType OUTPUT
-)
-AS
-
-SET XACT_ABORT ON;
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
-
-DECLARE @FromWhse WhseType,
-	@ToBU nvarchar(10),
-	@Severity INT,
-	@AddDocument INT = 0
-
---Get Old Document (not print)
-SELECT TOP 1 @DocumentNum = document_num
-FROM GEN_Serial 
-WHERE job = @Job AND suffix = @Suffix AND (print_flag IS NULL OR print_flag = 0)
-
-IF @DocumentNum IS NULL
-BEGIN
-	
-	SET @AddDocument = 1
-
-	SELECT @FromWhse = whse,
-		@ToBU = Uf_BU
-	FROM job WHERE job = @Job AND Suffix = @Suffix
-
-	EXEC	@Severity = [dbo].[GEN_SendToStoreGetDocNumberSp]
-			@FromWhse = @FromWhse,
-			@ToBU = @ToBU,
-			@DocumentDate = @DocumentDate,
-			@DocumentNum = @DocumentNum OUTPUT,
-			@Infobar = @Infobar OUTPUT
-
-	IF @Severity <> 0
-		RETURN @Severity
-END
-
-SELECT @Sequence = MAX ( sequence )
-FROM GEN_FGSendToStore
-WHERE job = @Job AND suffix = @Suffix
-
-SET @Sequence = ISNULL(@Sequence, 0) + 1;
-
-INSERT INTO GEN_FGSendToStore (trans_num, sequence, document_date, job, suffix, oper_num, posted_qty, sent_qty, received_qty, cur_send_qty, cur_received_qty, print_flag, document_num)
-VALUES (@TransNum, @Sequence, @DocumentDate, @Job, @Suffix, @OperNum, @PostedQty, @CurSendQty, @ReceivedQty, @CurSendQty, @CurReceivedQty, @PrintFlag, @DocumentNum)
-
-IF @AddDocument = 1
-	INSERT INTO [dbo].[GEN_Serial] ([document_num]
-		  ,[job]
-		  ,[suffix]
-		  ,[oper_num]
-		  ,[qty]
-		  ,[doc_date] )
-
-	VALUES (@DocumentNum, @Job, @Suffix, @OperNum, @CurSendQty, @DocumentDate)
-
-IF @AddDocument = 0
-	UPDATE [dbo].[GEN_Serial] SET qty = ISNULL(qty, 0) + @CurSendQty
-	WHERE document_num = @DocumentNum
-GO
-
-/****** Object:  StoredProcedure [dbo].[GEN_SendToStoreGetDocNumberSp]    Script Date: 17/10/2026 5:51:23 AM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE   PROCEDURE [dbo].[GEN_SendToStoreGetDocNumberSp]
-(
-    @FromWhse WhseType,
-    @ToBU nvarchar(10),
-    @DocumentDate DateTimeType,
-    @DocumentNum DocumentNumType OUTPUT,
-    @Infobar InfobarType OUTPUT
-)
-AS
-BEGIN
-    SET NOCOUNT ON;
-    SET XACT_ABORT ON;
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
-
-    DECLARE
-        @MM CHAR(2) = FORMAT(@DocumentDate, 'MM'),
-        @yy CHAR(2) = FORMAT(@DocumentDate, 'yy'),
-        @Prefix01 VARCHAR(50),
-        @Prefix02 VARCHAR(50),
-        @Prefix03 VARCHAR(50),
-        @NextNN INT,
-        @NewNN VARCHAR(4);
-         
-        SELECT
-            @Prefix01 = prefix_01,
-            @Prefix02 = prefix_02,
-            @Prefix03 = prefix_03,
-            @yy = yy,
-            @MM = MM,
-            @NextNN = TRY_CONVERT(INT, ISNULL(nn, '0000')) + 1
-        FROM GEN_SendToStoreDocNumber WITH (UPDLOCK, HOLDLOCK)
-        WHERE from_whse = @FromWhse
-          AND to_bu = @ToBU
-          AND MM = @MM
-          AND yy = @yy;
-
-        IF @NextNN IS NULL
-            THROW 50001, 'Document number record not found or invalid.', 1;
-
-        IF @NextNN > 9999
-            THROW 50002, 'Document number has exceeded 9999.', 1;
-
-        SET @NewNN = RIGHT('0000' + CONVERT(VARCHAR(10), @NextNN), 4);
-
-        -- Update running number
-        UPDATE GEN_SendToStoreDocNumber
-        SET nn = @NewNN
-        WHERE from_whse = @FromWhse
-          AND to_bu = @ToBU
-          AND MM = @MM
-          AND yy = @yy;
-           
-        SET @DocumentNum = CONCAT(
-            @Prefix01, @Prefix02, @Prefix03, @yy, @MM, @NewNN
-        );
-         
-END;
 GO
 
 

@@ -1,3 +1,30 @@
+ 
+/****** Object:  View [dbo].[GEN_FGSendToStore]    Script Date: 26/10/2026 3:27:32 PM ******/
+DROP VIEW [dbo].[GEN_FGSendToStore]
+GO
+
+/****** Object:  View [dbo].[GEN_SendToStoreDocNumber]    Script Date: 26/10/2026 3:27:32 PM ******/
+DROP VIEW [dbo].[GEN_SendToStoreDocNumber]
+GO
+
+/****** Object:  View [dbo].[GEN_Serial]    Script Date: 26/10/2026 3:27:32 PM ******/
+DROP VIEW [dbo].[GEN_Serial]
+GO
+
+/****** Object:  View [dbo].[GEN_SerialDel]    Script Date: 26/10/2026 3:27:32 PM ******/
+DROP VIEW [dbo].[GEN_SerialDel]
+GO
+
+/****** Object:  View [dbo].[GEN_SerialDel]    Script Date: 26/10/2026 3:27:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
 CREATE VIEW [dbo].[GEN_SerialDel]
 AS SELECT [document_num]
       ,[job]
@@ -13,7 +40,7 @@ AS SELECT [document_num]
             WHERE site_ref = CAST(CONTEXT_INFO() AS NVARCHAR(8))
 GO
 
-/****** Object:  View [dbo].[GEN_Serial]    Script Date: 17/10/2026 5:50:23 AM ******/
+/****** Object:  View [dbo].[GEN_Serial]    Script Date: 26/10/2026 3:27:32 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -37,7 +64,7 @@ AS SELECT [document_num]
             WHERE site_ref = CAST(CONTEXT_INFO() AS NVARCHAR(8))
 GO
 
-/****** Object:  View [dbo].[GEN_SendToStoreDocNumber]    Script Date: 17/10/2026 5:50:23 AM ******/
+/****** Object:  View [dbo].[GEN_SendToStoreDocNumber]    Script Date: 26/10/2026 3:27:32 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -63,12 +90,13 @@ AS SELECT [from_whse]
             WHERE site_ref = CAST(CONTEXT_INFO() AS NVARCHAR(8))
 GO
 
-/****** Object:  View [dbo].[GEN_FGSendToStore]    Script Date: 17/10/2026 5:50:23 AM ******/
+/****** Object:  View [dbo].[GEN_FGSendToStore]    Script Date: 26/10/2026 3:27:32 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 CREATE VIEW [dbo].[GEN_FGSendToStore]
@@ -85,6 +113,7 @@ AS SELECT [trans_num]
       ,[cur_received_qty]
       ,[print_flag]
       ,[document_num]
+      ,[process_id]
       ,[RecordDate]
       ,[RowPointer]
        
