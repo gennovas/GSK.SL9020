@@ -4,8 +4,8 @@
       <IDODefinition Name="GEN_FGSendToStores">
          <ServerName>GENNOVAS</ServerName>
          <LabelStringID>oGEN_FGSendToStores</LabelStringID>
-         <RevisionNo>2</RevisionNo>
-         <RevisionDate>2026-10-15T12:07:56</RevisionDate>
+         <RevisionNo>5</RevisionNo>
+         <RevisionDate>2026-10-26T20:39:32</RevisionDate>
          <ReplaceFlag>0</ReplaceFlag>
          <Tables>
             <Table Name="job" Alias="job" Type="SECONDARY">
@@ -103,6 +103,7 @@
                   <Property Sequence="11">ReceivedQty</Property>
                   <Property Sequence="12">DocumentNum</Property>
                   <Property Sequence="13">CurSendQty</Property>
+                  <Property Sequence="14">DerQtyLimit</Property>
                </ResultSetProperties>
             </Method>
             <Method Name="GEN_FGSendToStoreProcessSp" Transactional="YES">
@@ -224,6 +225,45 @@
                </Parameters>
                <ResultSetProperties />
             </Method>
+            <Method Name="GEN_UpdateSentQtyReceiptSp" Transactional="YES">
+               <StoredProcedure>GEN_UpdateSentQtyReceiptSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="DocumentNum" Sequence="1">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Infobar" Sequence="6">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Job" Sequence="2">
+                     <DBDataType Length="20" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="OperNum" Sequence="4">
+                     <DBDataType Length="10" Scale="0">LONG</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="QtyReceived" Sequence="5">
+                     <DBDataType Length="19" Scale="8">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Suffix" Sequence="3">
+                     <DBDataType Length="5" Scale="0">SHORT</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
          </Methods>
          <Properties>
             <Property Name="CurReceivedQty" Key="0" Binding="BOUND" Sequence="11">
@@ -247,6 +287,12 @@
                   <DataLength>19</DataLength>
                   <DataType>Decimal</DataType>
                </PropertyAttributes>
+            </Property>
+            <Property Name="DerQtyLimit" Binding="DERIVED" Sequence="0">
+               <PropertyClass>QtyUnit</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>(QtyComplete + ISNULL(SentQty, 0))</Expression>
+               <PropertyAttributes />
             </Property>
             <Property Name="Description" Key="0" Binding="BOUND" Sequence="79">
                <PseudoKeyFlag>0</PseudoKeyFlag>
