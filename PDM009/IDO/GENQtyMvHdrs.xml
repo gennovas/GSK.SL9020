@@ -4,8 +4,8 @@
       <IDODefinition Name="GENQtyMvHdrs">
          <ServerName>GENNOVAS</ServerName>
          <LabelStringID>oGEN_QtyMv_Hdrs</LabelStringID>
-         <RevisionNo>17</RevisionNo>
-         <RevisionDate>2026-10-21T08:12:18</RevisionDate>
+         <RevisionNo>18</RevisionNo>
+         <RevisionDate>2026-10-28T09:37:55</RevisionDate>
          <ReplaceFlag>0</ReplaceFlag>
          <Tables>
             <Table Name="custaddr" Alias="custaddr" Type="SECONDARY">
@@ -31,6 +31,44 @@
             </Table>
          </Tables>
          <Methods>
+            <Method Name="GEN_AddQtyMoveLineSp" Transactional="YES">
+               <StoredProcedure>GEN_AddQtyMoveLineSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="Infobar" Sequence="2">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Job" Sequence="3">
+                     <DBDataType Length="20" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="JobmatlSequence" Sequence="6">
+                     <DBDataType Length="11" Scale="0">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="OperNum" Sequence="5">
+                     <DBDataType Length="10" Scale="0">LONG</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="QtyMoveDocNum" Sequence="1">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Suffix" Sequence="4">
+                     <DBDataType Length="5" Scale="0">SHORT</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
             <Method Name="GEN_PostMultiSiteMoveUtilitySp" Transactional="NO">
                <StoredProcedure>GEN_PostMultiSiteMoveUtilitySp</StoredProcedure>
                <MethodType>0</MethodType>
