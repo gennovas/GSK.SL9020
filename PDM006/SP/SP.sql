@@ -1,28 +1,28 @@
-
-/****** Object:  StoredProcedure [dbo].[GEN_DeleteSendToStoreDocSp]    Script Date: 26/10/2026 9:12:26 PM ******/
-DROP PROCEDURE [dbo].[GEN_DeleteSendToStoreDocSp]
-GO
-
-/****** Object:  StoredProcedure [dbo].[GEN_FGSendToStoreProcessSp]    Script Date: 26/10/2026 9:12:26 PM ******/
-DROP PROCEDURE [dbo].[GEN_FGSendToStoreProcessSp]
-GO
-
-/****** Object:  StoredProcedure [dbo].[GEN_UpdateSentQtyReceiptSp]    Script Date: 26/10/2026 9:12:26 PM ******/
+ 
+/****** Object:  StoredProcedure [dbo].[GEN_UpdateSentQtyReceiptSp]    Script Date: 27/10/2026 9:36:48 AM ******/
 DROP PROCEDURE [dbo].[GEN_UpdateSentQtyReceiptSp]
 GO
 
-/****** Object:  StoredProcedure [dbo].[GEN_CLM_FGSendToStoreLoadSp]    Script Date: 26/10/2026 9:12:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[GEN_FGSendToStoreProcessSp]    Script Date: 27/10/2026 9:36:48 AM ******/
+DROP PROCEDURE [dbo].[GEN_FGSendToStoreProcessSp]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GEN_DeleteSendToStoreDocSp]    Script Date: 27/10/2026 9:36:48 AM ******/
+DROP PROCEDURE [dbo].[GEN_DeleteSendToStoreDocSp]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GEN_CLM_FGSendToStoreLoadSp]    Script Date: 27/10/2026 9:36:48 AM ******/
 DROP PROCEDURE [dbo].[GEN_CLM_FGSendToStoreLoadSp]
 GO
 
-/****** Object:  StoredProcedure [dbo].[GEN_CLM_FGSendToStoreLoadSp]    Script Date: 26/10/2026 9:12:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[GEN_CLM_FGSendToStoreLoadSp]    Script Date: 27/10/2026 9:36:48 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-
+ 
 
 CREATE PROCEDURE [dbo].[GEN_CLM_FGSendToStoreLoadSp] (
 	@StartJob		JobType,
@@ -107,7 +107,7 @@ BEGIN
 		0 received_qty,
 		NULL document_num,
 		(jtr.qty_complete - isnull(st.Sent_qty,0))  qty_to_send,
-		jtr.qty_complete + 	isnull(st.Sent_qty,0) AccmQty
+		jtr.qty_complete - 	isnull(st.Sent_qty,0) AccmQty
 	FROM jobtran jtr
 		INNER JOIN job j ON jtr.job = j.job and jtr.suffix = j.suffix
 		INNER JOIN job_sch js ON jtr.job = js.job and jtr.suffix = js.suffix
@@ -213,37 +213,44 @@ ELSE IF @RefreshOption = 'P'
 		ORDER BY s.job, s.suffix
 GO
 
-/****** Object:  StoredProcedure [dbo].[GEN_UpdateSentQtyReceiptSp]    Script Date: 26/10/2026 9:12:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[GEN_DeleteSendToStoreDocSp]    Script Date: 27/10/2026 9:36:48 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[GEN_UpdateSentQtyReceiptSp](
+ 
+
+CREATE PROCEDURE [dbo].[GEN_DeleteSendToStoreDocSp]
+(
 	@DocumentNum DocumentNumType,
-	@Job JobType,
-	@Suffix SuffixType,
-	@OperNum OperNumType,
-	@QtyReceived QtyUnitType,
-	@Infobar InfobarType OUTPUT
+	@InfoBar InfobarType OUTPUT
 )
 AS
 
 SET XACT_ABORT ON;
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+--Validation need?
+
+INSERT INTO GEN_SerialDel (document_num, job, suffix, oper_num, qty, print_flag, received_qty, doc_date)
+SELECT document_num, job, suffix, oper_num, qty, print_flag, received_qty, doc_date
+FROM GEN_Serial WHERE document_num = @DocumentNum AND ( received_qty IS NULL OR received_qty = 0 )
  
-UPDATE GEN_Serial SET received_qty = @QtyReceived WHERE document_num = @DocumentNum
-UPDATE GEN_FGSendToStore SET received_qty = sent_qty WHERE document_num = @DocumentNum
+DELETE GEN_Serial WHERE document_num = @DocumentNum AND ( received_qty IS NULL OR received_qty = 0 ) 
+
+DELETE GEN_FGSendToStore_mst where  document_num = @DocumentNum  and ( received_qty is null or received_qty = 0 ) 
 GO
 
-/****** Object:  StoredProcedure [dbo].[GEN_FGSendToStoreProcessSp]    Script Date: 26/10/2026 9:12:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[GEN_FGSendToStoreProcessSp]    Script Date: 27/10/2026 9:36:48 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
+ 
 
 CREATE PROCEDURE [dbo].[GEN_FGSendToStoreProcessSp](
 	@TransNum HugeTransNumType,
@@ -299,7 +306,7 @@ END
 
 SELECT @Sequence = MAX ( sequence )
 FROM GEN_FGSendToStore
-WHERE job = @Job AND suffix = @Suffix
+WHERE job = @Job AND suffix = @Suffix and process_id = @ProcessId
 
 SET @Sequence = ISNULL(@Sequence, 0) + 1;
 
@@ -321,30 +328,28 @@ IF @AddDocument = 0
 	WHERE document_num = @DocumentNum
 GO
 
-/****** Object:  StoredProcedure [dbo].[GEN_DeleteSendToStoreDocSp]    Script Date: 26/10/2026 9:12:26 PM ******/
+/****** Object:  StoredProcedure [dbo].[GEN_UpdateSentQtyReceiptSp]    Script Date: 27/10/2026 9:36:48 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[GEN_DeleteSendToStoreDocSp]
-(
+CREATE PROCEDURE [dbo].[GEN_UpdateSentQtyReceiptSp](
 	@DocumentNum DocumentNumType,
-	@InfoBar InfobarType OUTPUT
+	@Job JobType,
+	@Suffix SuffixType,
+	@OperNum OperNumType,
+	@QtyReceived QtyUnitType,
+	@Infobar InfobarType OUTPUT
 )
 AS
 
 SET XACT_ABORT ON;
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
-
---Validation need?
-
-INSERT INTO GEN_SerialDel (document_num, job, suffix, oper_num, qty, print_flag, received_qty, doc_date)
-SELECT document_num, job, suffix, oper_num, qty, print_flag, received_qty, doc_date
-FROM GEN_Serial WHERE document_num = @DocumentNum
  
-DELETE GEN_Serial WHERE document_num = @DocumentNum
+UPDATE GEN_Serial SET received_qty = @QtyReceived WHERE document_num = @DocumentNum
+UPDATE GEN_FGSendToStore SET received_qty = sent_qty WHERE document_num = @DocumentNum
 GO
 
 
