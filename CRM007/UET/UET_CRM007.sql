@@ -21,6 +21,12 @@ IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_ApprovedBy')
 IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_ApprovedDate')
 	INSERT INTO user_fld ( fld_name, fld_data_type, fld_initial, fld_decimals, fld_desc, sys_apply, sys_delete, fld_UDT, fld_prec ) 
 	VALUES (N'Uf_ApprovedDate', N'datetime', NULL, 0, NULL, NULL, 0, NULL, 0)
+IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_Fname')
+	INSERT INTO user_fld ( fld_name, fld_data_type, fld_initial, fld_decimals, fld_desc, sys_apply, sys_delete, fld_UDT, fld_prec ) 
+	VALUES (N'Uf_Fname', N'nvarchar', NULL, NULL, NULL, NULL, 0, NULL, 50)
+IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_Lname')
+	INSERT INTO user_fld ( fld_name, fld_data_type, fld_initial, fld_decimals, fld_desc, sys_apply, sys_delete, fld_UDT, fld_prec ) 
+	VALUES (N'Uf_Lname', N'nvarchar', NULL, NULL, NULL, NULL, 0, NULL, 50)
 
 -- Class/Fields
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_rfq' AND fld_name = N'Uf_Approved')
@@ -32,6 +38,12 @@ IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_rfq' AND
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_rfq' AND fld_name = N'Uf_ApprovedDate')
 	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
 	VALUES (N'Uc_ERPP_rfq', N'Uf_ApprovedDate', NULL, 0)
+IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_rfq' AND fld_name = N'Uf_Fname')
+	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
+	VALUES (N'Uc_ERPP_rfq', N'Uf_Fname', NULL, 0)
+IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_rfq' AND fld_name = N'Uf_Lname')
+	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
+	VALUES (N'Uc_ERPP_rfq', N'Uf_Lname', NULL, 0)
 
 DECLARE @RC int
 DECLARE @PCommit tinyint

@@ -54,6 +54,16 @@ IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_Signature')
 	INSERT INTO user_fld ( fld_name, fld_data_type, fld_initial, fld_decimals, fld_desc, sys_apply, sys_delete, fld_UDT, fld_prec ) 
 	VALUES (N'Uf_Signature', N'varbinary', NULL, NULL, NULL, NULL, 0, 'ImageType', -1)
 
+IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_Fname')
+	INSERT INTO user_fld ( fld_name, fld_data_type, fld_initial, fld_decimals, fld_desc, sys_apply, sys_delete, fld_UDT, fld_prec ) 
+	VALUES (N'Uf_Fname', N'nvarchar', NULL, NULL, NULL, NULL, 0, NULL, 50)
+IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_Lname')
+	INSERT INTO user_fld ( fld_name, fld_data_type, fld_initial, fld_decimals, fld_desc, sys_apply, sys_delete, fld_UDT, fld_prec ) 
+	VALUES (N'Uf_Lname', N'nvarchar', NULL, NULL, NULL, NULL, 0, NULL, 50)
+IF NOT EXISTS(SELECT * FROM user_fld WHERE fld_name = N'Uf_Tooling_200')
+	INSERT INTO user_fld ( fld_name, fld_data_type, fld_initial, fld_decimals, fld_desc, sys_apply, sys_delete, fld_UDT, fld_prec ) 
+	VALUES (N'Uf_Tooling_200', N'nvarchar', NULL, NULL, NULL, NULL, 0, NULL, 200)
+
 -- Class/Fields
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quotation' AND fld_name = N'Uf_UnitCode3')
 	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
@@ -84,6 +94,16 @@ IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quota
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quotation' AND fld_name = N'Uf_Signature')
 	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
 	VALUES (N'Uc_ERPP_SK_Quotation', N'Uf_Signature', NULL, 0)
+
+IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quotation' AND fld_name = N'Uf_Fname')
+	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
+	VALUES (N'Uc_ERPP_SK_Quotation', N'Uf_Fname', NULL, 0)
+IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quotation' AND fld_name = N'Uf_Lname')
+	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
+	VALUES (N'Uc_ERPP_SK_Quotation', N'Uf_Lname', NULL, 0)
+IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quotation' AND fld_name = N'Uf_Tooling_200')
+	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
+	VALUES (N'Uc_ERPP_SK_Quotation', N'Uf_Tooling_200', NULL, 0)
 /*	
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_Employee' AND fld_name = N'Uf_Signature')
 	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 

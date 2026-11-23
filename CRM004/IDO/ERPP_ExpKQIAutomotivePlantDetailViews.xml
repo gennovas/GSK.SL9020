@@ -4,26 +4,21 @@
       <IDODefinition Name="ERPP_ExpKQIAutomotivePlantDetailViews">
          <ServerName>ERPP_FINANCE</ServerName>
          <LabelStringID>oERPP_ExpKQIAutomotivePlantDetailViews</LabelStringID>
-         <RevisionNo>4</RevisionNo>
-         <RevisionDate>2026-08-11T08:50:35</RevisionDate>
+         <RevisionNo>7</RevisionNo>
+         <RevisionDate>2026-11-23T13:35:16</RevisionDate>
          <ReplaceFlag>0</ReplaceFlag>
          <Tables>
             <Table Name="ERPP_ExpKQIAutomotivePlantDetailView" Alias="v" Type="PRIMARY" />
          </Tables>
          <Methods />
          <Properties>
-            <Property Name="BU" Binding="DERIVED" Sequence="0">
+            <Property Name="BU" Key="0" Binding="BOUND" Sequence="29">
                <PseudoKeyFlag>0</PseudoKeyFlag>
-               <Expression>(
-CASE DocType
-     WHEN 'I' THEN ( SELECT TOP 1 '' FROM inv_hdr i WHERE i.inv_seq = 0 AND i.inv_num = InvNum )
-     WHEN 'D' THEN ( SELECT TOP 1 Uf_BU FROM co WHERE co.co_num = CoNum )
-     WHEN 'Q' THEN ( SELECT TOP 1 Uf_UnitCode3 FROM ERPP_SK_Quotation q WHERE q.rfq_revision = 0 AND q.qt_num = InvNum  )
-     ELSE ''
-END
-)</Expression>
+               <BoundToColumn>BU</BoundToColumn>
+               <ColumnTableAlias>v</ColumnTableAlias>
                <PropertyAttributes>
-                  <DataLength>15</DataLength>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>50</DataLength>
                   <DataType>String</DataType>
                </PropertyAttributes>
             </Property>
