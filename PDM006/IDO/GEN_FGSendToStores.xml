@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="GEN_FGSendToStores">
+         <ServerName>GENNOVAS</ServerName>
+         <LabelStringID>oGEN_FGSendToStores</LabelStringID>
+         <RevisionNo>5</RevisionNo>
+         <RevisionDate>2026-10-26T20:39:32</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="job" Alias="job" Type="SECONDARY">
+               <ExplicitJoin>job.job = jtr.job AND job.suffix = jtr.suffix</ExplicitJoin>
+               <JoinType>INNER</JoinType>
+            </Table>
+            <Table Name="jobtran" Alias="jtr" Type="SECONDARY">
+               <ExplicitJoin>jtr.trans_num = sd.trans_num</ExplicitJoin>
+               <JoinType>INNER</JoinType>
+            </Table>
+            <Table Name="GEN_FGSendToStore" Alias="sd" Type="PRIMARY" />
+         </Tables>
+         <Methods>
+            <Method Name="GEN_CLM_FGSendToStoreLoadSp" Transactional="NO" Type="CustomLoad">
+               <StoredProcedure>GEN_CLM_FGSendToStoreLoadSp</StoredProcedure>
+               <MethodType>1</MethodType>
+               <Parameters>
+                  <Parameter Name="EndDocDate" Sequence="12">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="EndDocumentNum" Sequence="10">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="EndItem" Sequence="6">
+                     <DBDataType Length="30" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="EndJob" Sequence="2">
+                     <DBDataType Length="20" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="EndJobDate" Sequence="8">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="EndSuffix" Sequence="4">
+                     <DBDataType Length="5" Scale="0">SHORT</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="FromBU" Sequence="14">
+                     <DBDataType Length="4" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="FromTransDate" Sequence="16">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="RefreshOption" Sequence="13">
+                     <DBDataType Length="1" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="StartDocDate" Sequence="11">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="StartDocumentNum" Sequence="9">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="StartItem" Sequence="5">
+                     <DBDataType Length="30" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="StartJob" Sequence="1">
+                     <DBDataType Length="20" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="StartJobDate" Sequence="7">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="StartSuffix" Sequence="3">
+                     <DBDataType Length="5" Scale="0">SHORT</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="ToBU" Sequence="15">
+                     <DBDataType Length="10" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="ToTransDate" Sequence="17">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties>
+                  <Property Sequence="1">TransDate</Property>
+                  <Property Sequence="2">TransNum</Property>
+                  <Property Sequence="3">Sequence</Property>
+                  <Property Sequence="4">Job</Property>
+                  <Property Sequence="5">Suffix</Property>
+                  <Property Sequence="6">OperNum</Property>
+                  <Property Sequence="7">Item</Property>
+                  <Property Sequence="8">Description</Property>
+                  <Property Sequence="9">QtyComplete</Property>
+                  <Property Sequence="10">SentQty</Property>
+                  <Property Sequence="11">ReceivedQty</Property>
+                  <Property Sequence="12">DocumentNum</Property>
+                  <Property Sequence="13">CurSendQty</Property>
+                  <Property Sequence="14">DerQtyLimit</Property>
+               </ResultSetProperties>
+            </Method>
+            <Method Name="GEN_FGSendToStoreProcessSp" Transactional="YES">
+               <StoredProcedure>GEN_FGSendToStoreProcessSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="CurReceivedQty" Sequence="11">
+                     <DBDataType Length="19" Scale="8">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="CurSendQty" Sequence="10">
+                     <DBDataType Length="19" Scale="8">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="DocumentDate" Sequence="3">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="DocumentNum" Sequence="13">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Infobar" Sequence="14">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Job" Sequence="4">
+                     <DBDataType Length="20" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="OperNum" Sequence="6">
+                     <DBDataType Length="10" Scale="0">LONG</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="PostedQty" Sequence="7">
+                     <DBDataType Length="19" Scale="8">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="PrintFlag" Sequence="12">
+                     <DBDataType Length="3" Scale="0">BYTE</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="ProcessId" Sequence="15">
+                     <DBDataType Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="ReceivedQty" Sequence="9">
+                     <DBDataType Length="19" Scale="8">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="SentQty" Sequence="8">
+                     <DBDataType Length="19" Scale="8">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Sequence" Sequence="2">
+                     <DBDataType Length="11" Scale="0">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Suffix" Sequence="5">
+                     <DBDataType Length="5" Scale="0">SHORT</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="TransNum" Sequence="1">
+                     <DBDataType Length="11" Scale="0">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+            <Method Name="GEN_SendToStoreGetDocNumberSp" Transactional="YES">
+               <StoredProcedure>GEN_SendToStoreGetDocNumberSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="DocumentDate" Sequence="3">
+                     <DBDataType Scale="0">TIMESTAMP</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="DocumentNum" Sequence="4">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="FromWhse" Sequence="1">
+                     <DBDataType Length="4" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Infobar" Sequence="5">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="ToBU" Sequence="2">
+                     <DBDataType Length="10" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+            <Method Name="GEN_UpdateSentQtyReceiptSp" Transactional="YES">
+               <StoredProcedure>GEN_UpdateSentQtyReceiptSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="DocumentNum" Sequence="1">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Infobar" Sequence="6">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Job" Sequence="2">
+                     <DBDataType Length="20" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="OperNum" Sequence="4">
+                     <DBDataType Length="10" Scale="0">LONG</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="QtyReceived" Sequence="5">
+                     <DBDataType Length="19" Scale="8">NUMERIC</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="Suffix" Sequence="3">
+                     <DBDataType Length="5" Scale="0">SHORT</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+         </Methods>
+         <Properties>
+            <Property Name="CurReceivedQty" Key="0" Binding="BOUND" Sequence="11">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cur_received_qty</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="CurSendQty" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>cur_send_qty</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DerQtyLimit" Binding="DERIVED" Sequence="0">
+               <PropertyClass>QtyUnit</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <Expression>(QtyComplete + ISNULL(SentQty, 0))</Expression>
+               <PropertyAttributes />
+            </Property>
+            <Property Name="Description" Key="0" Binding="BOUND" Sequence="79">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>description</BoundToColumn>
+               <ColumnTableAlias>job</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DescriptionType</ColumnDataType>
+                  <DataLength>40</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DocumentDate" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>document_date</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DateTimeType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DocumentNum" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>document_num</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DocumentNumType</ColumnDataType>
+                  <DataLength>12</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Item" Key="0" Binding="BOUND" Sequence="13">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>item</BoundToColumn>
+               <ColumnTableAlias>job</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>ItemType</ColumnDataType>
+                  <DataLength>30</DataLength>
+                  <DataType>String</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Job" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>job</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>JobType</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="OperNum" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>oper_num</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>OperNumType</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="PostedQty" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>posted_qty</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="PrintFlag" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>print_flag</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>tinyint</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="QtyComplete" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>qty_complete</BoundToColumn>
+               <ColumnTableAlias>jtr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="ReceivedQty" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>received_qty</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="14">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="15">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="SentQty" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>sent_qty</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Sequence" Key="0" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>sequence</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>SequenceType</ColumnDataType>
+                  <DataDecimalPos>0</DataDecimalPos>
+                  <DataLength>11</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Suffix" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>suffix</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>SuffixType</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="TransDate" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>trans_date</BoundToColumn>
+               <ColumnTableAlias>jtr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="TransNum" Key="0" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>trans_num</BoundToColumn>
+               <ColumnTableAlias>sd</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>HugeTransNumType</ColumnDataType>
+                  <DataDecimalPos>0</DataDecimalPos>
+                  <DataLength>11</DataLength>
+                  <DataType>Decimal</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="UbSelect" Binding="UNBOUND" Sequence="0">
+               <PropertyClass>ListYesNo</PropertyClass>
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <PropertyAttributes />
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>

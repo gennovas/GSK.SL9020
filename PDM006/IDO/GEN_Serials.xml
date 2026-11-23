@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="GEN_Serials">
+         <ServerName>GENNOVAS</ServerName>
+         <LabelStringID>oGEN_Serials</LabelStringID>
+         <RevisionNo>4</RevisionNo>
+         <RevisionDate>2026-11-16T14:10:36</RevisionDate>
+         <ReplaceFlag>0</ReplaceFlag>
+         <Tables>
+            <Table Name="GEN_Serial" Alias="sr" Type="PRIMARY" />
+         </Tables>
+         <Methods>
+            <Method Name="GEN_DeleteSendToStoreDocSp" Transactional="YES">
+               <StoredProcedure>GEN_DeleteSendToStoreDocSp</StoredProcedure>
+               <MethodType>0</MethodType>
+               <Parameters>
+                  <Parameter Name="DocumentNum" Sequence="1">
+                     <DBDataType Length="12" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="InfoBar" Sequence="2">
+                     <DBDataType Length="2800" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <OUTPUT />
+                     <MESSAGE />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties />
+            </Method>
+         </Methods>
+         <Properties>
+            <Property Name="DocDate" Key="0" Binding="BOUND" Sequence="8">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>doc_date</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DateTimeType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="DocumentNum" Key="0" Binding="BOUND" Sequence="1">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>document_num</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>DocumentNumType</ColumnDataType>
+                  <DataLength>12</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Job" Key="0" Binding="BOUND" Sequence="2">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>job</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>JobType</ColumnDataType>
+                  <DataLength>20</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="OperNum" Key="0" Binding="BOUND" Sequence="4">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>oper_num</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>OperNumType</ColumnDataType>
+                  <DataType>Long Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="PrintFlag" Key="0" Binding="BOUND" Sequence="6">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>print_flag</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>ListYesNoType</ColumnDataType>
+                  <DataType>Byte</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Qty" Key="0" Binding="BOUND" Sequence="5">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>qty</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="ReceivedQty" Key="0" Binding="BOUND" Sequence="7">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>received_qty</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>QtyUnitType</ColumnDataType>
+                  <DataDecimalPos>8</DataDecimalPos>
+                  <DataLength>19</DataLength>
+                  <DataType>Decimal</DataType>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RecordDate" Key="0" Binding="BOUND" Sequence="9">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RecordDate</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>CurrentDateType</ColumnDataType>
+                  <DataType>Date</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="RowPointer" Key="0" Binding="BOUND" Sequence="10">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>RowPointer</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>RowPointerType</ColumnDataType>
+                  <DataType>GUID</DataType>
+                  <IsReadOnly>1</IsReadOnly>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Serial" Key="0" Binding="BOUND" Sequence="12">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>serial</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>nvarchar</ColumnDataType>
+                  <DataLength>50</DataLength>
+                  <DataType>String</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+            <Property Name="Suffix" Key="0" Binding="BOUND" Sequence="3">
+               <PseudoKeyFlag>0</PseudoKeyFlag>
+               <BoundToColumn>suffix</BoundToColumn>
+               <ColumnTableAlias>sr</ColumnTableAlias>
+               <PropertyAttributes>
+                  <ColumnDataType>SuffixType</ColumnDataType>
+                  <DataType>Short Integer</DataType>
+                  <IsRequired>1</IsRequired>
+               </PropertyAttributes>
+            </Property>
+         </Properties>
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>
