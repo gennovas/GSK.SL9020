@@ -104,10 +104,12 @@ IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quota
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_ERPP_SK_Quotation' AND fld_name = N'Uf_Tooling_200')
 	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
 	VALUES (N'Uc_ERPP_SK_Quotation', N'Uf_Tooling_200', NULL, 0)
-/*	
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_Employee' AND fld_name = N'Uf_Signature')
 	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
 	VALUES (N'Uc_Employee', N'Uf_Signature', NULL, 0)
+
+/*	
+
 IF NOT EXISTS(SELECT * FROM user_class_fld WHERE class_name = N'Uc_UserName' AND fld_name = N'Uf_Signature')
 	INSERT INTO user_class_fld ( class_name, fld_name, sys_apply, sys_delete ) 
 	VALUES (N'Uc_UserName', N'Uf_Signature', NULL, 0)

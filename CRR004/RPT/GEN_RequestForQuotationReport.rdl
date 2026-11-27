@@ -528,6 +528,10 @@
           <DataField>PaymentTermTooling</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Signature">
+          <DataField>Signature</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
       </Fields>
     </DataSet>
   </DataSets>
@@ -10765,7 +10769,6 @@
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
-                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell>
@@ -10906,7 +10909,7 @@
                               </TablixRowHierarchy>
                               <DataSetName>DataSet1</DataSetName>
                               <Height>2.96632cm</Height>
-                              <Width>14.9945cm</Width>
+                              <Width>14.99451cm</Width>
                               <ZIndex>5</ZIndex>
                               <Style>
                                 <Border>
@@ -17148,7 +17151,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>1.2696cm</Height>
+                  <Height>1.69293cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -17181,7 +17184,7 @@
                                 </TablixColumns>
                                 <TablixRows>
                                   <TablixRow>
-                                    <Height>0.4942cm</Height>
+                                    <Height>0.91753cm</Height>
                                     <TablixCells>
                                       <TablixCell>
                                         <CellContents>
@@ -17225,7 +17228,7 @@
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>..............................................................</Value>
+                                                    <Value />
                                                     <Style>
                                                       <FontFamily>Tahoma</FontFamily>
                                                       <FontSize>7pt</FontSize>
@@ -17351,37 +17354,18 @@
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="Textbox139">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value>..............................................................</Value>
-                                                    <Style>
-                                                      <FontFamily>Tahoma</FontFamily>
-                                                      <FontSize>7pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Center</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox139</rd:DefaultName>
+                                          <Image Name="Image1">
+                                            <Source>Database</Source>
+                                            <Value>=Fields!Signature.Value</Value>
+                                            <MIMEType>image/jpeg</MIMEType>
+                                            <Sizing>Fit</Sizing>
                                             <Style>
                                               <Border>
                                                 <Style>None</Style>
                                               </Border>
-                                              <VerticalAlign>Bottom</VerticalAlign>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
-                                          </Textbox>
+                                          </Image>
+                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell>
@@ -17705,7 +17689,7 @@
                                   <TablixMember />
                                 </TablixMembers>
                               </TablixRowHierarchy>
-                              <Height>1.2696cm</Height>
+                              <Height>1.69293cm</Height>
                               <Width>19.79865cm</Width>
                               <Style>
                                 <Border>
@@ -17813,7 +17797,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Left>0.07938cm</Left>
-            <Height>25.62953cm</Height>
+            <Height>26.05286cm</Height>
             <Width>19.83393cm</Width>
             <Style>
               <Border>
@@ -17824,7 +17808,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>256.29526mm</Height>
+        <Height>260.52863mm</Height>
         <Style>
           <Border>
             <Style>None</Style>

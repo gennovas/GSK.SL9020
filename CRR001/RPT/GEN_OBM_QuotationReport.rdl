@@ -2122,7 +2122,22 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Size/Spec</Value>
+                                  <Value>Size/</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Spec</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
@@ -3245,6 +3260,11 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3281,6 +3301,11 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3317,6 +3342,11 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3353,6 +3383,11 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3389,6 +3424,11 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -3425,6 +3465,11 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -6356,9 +6401,6 @@
                           <GroupExpression>=Fields!rfq_revision.Value</GroupExpression>
                           <GroupExpression>=Ceiling(Fields!RowNo.Value/4)</GroupExpression>
                         </GroupExpressions>
-                        <PageBreak>
-                          <BreakLocation>Between</BreakLocation>
-                        </PageBreak>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
@@ -6437,7 +6479,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>0mm</Top>
-            <Left>0.1mm</Left>
+            <Left>0.25621mm</Left>
             <Height>136.35743mm</Height>
             <Width>195.87203mm</Width>
             <Style>
@@ -6447,17 +6489,17 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>6.86167in</Height>
+        <Height>5.3684in</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>7.71544in</Width>
+      <Width>7.72159in</Width>
       <Page>
         <PageFooter>
-          <Height>3.20971in</Height>
+          <Height>3.06074in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -6466,7 +6508,7 @@
               <Value>=First(Fields!Signature.Value, "DataSet1")</Value>
               <MIMEType>image/jpeg</MIMEType>
               <Top>1.05814in</Top>
-              <Left>4.23357in</Left>
+              <Left>4.23972in</Left>
               <Height>0.54066in</Height>
               <Width>2.60453in</Width>
               <Style>
@@ -6475,135 +6517,6 @@
                 </Border>
               </Style>
             </Image>
-            <Rectangle Name="Rectangle7">
-              <ReportItems>
-                <Textbox Name="Textbox119">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>S.K. POLYMER CO.,LTD.</Value>
-                          <Style>
-                            <FontStyle>Normal</FontStyle>
-                            <FontFamily>Tahoma</FontFamily>
-                            <FontSize>8pt</FontSize>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox119</rd:DefaultName>
-                  <Top>0.04167in</Top>
-                  <Left>0.99432in</Left>
-                  <Height>0.25in</Height>
-                  <Width>5.73347in</Width>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                    <BottomBorder>
-                      <Color>#bb792b</Color>
-                      <Style>Solid</Style>
-                    </BottomBorder>
-                    <VerticalAlign>Middle</VerticalAlign>
-                    <PaddingLeft>2pt</PaddingLeft>
-                    <PaddingRight>2pt</PaddingRight>
-                    <PaddingTop>2pt</PaddingTop>
-                    <PaddingBottom>2pt</PaddingBottom>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox120">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>166 Soi Thiantalay 20 , Bangkhunthian-Chytalay Rd., Samaedam, Bangkhunthian, Bangkok 10150, Thailand</Value>
-                          <Style>
-                            <FontStyle>Normal</FontStyle>
-                            <FontFamily>Tahoma</FontFamily>
-                            <FontSize>8pt</FontSize>
-                            <FontWeight>Normal</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox119</rd:DefaultName>
-                  <Top>0.28333in</Top>
-                  <Height>0.25in</Height>
-                  <Width>7.7115in</Width>
-                  <ZIndex>1</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                    <VerticalAlign>Middle</VerticalAlign>
-                    <PaddingLeft>2pt</PaddingLeft>
-                    <PaddingRight>2pt</PaddingRight>
-                    <PaddingTop>2pt</PaddingTop>
-                    <PaddingBottom>2pt</PaddingBottom>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox121">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>Tel : (662) 892 - 1092 up to 97      Fax : (662) 892 - 1098      www.skthai.com      E-mail : sales@skthai.com</Value>
-                          <Style>
-                            <FontStyle>Normal</FontStyle>
-                            <FontFamily>Tahoma</FontFamily>
-                            <FontSize>8pt</FontSize>
-                            <FontWeight>Normal</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox119</rd:DefaultName>
-                  <Top>0.53888in</Top>
-                  <Height>0.175in</Height>
-                  <Width>7.7115in</Width>
-                  <ZIndex>2</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                    <VerticalAlign>Middle</VerticalAlign>
-                    <PaddingLeft>2pt</PaddingLeft>
-                    <PaddingRight>2pt</PaddingRight>
-                    <PaddingTop>2pt</PaddingTop>
-                    <PaddingBottom>2pt</PaddingBottom>
-                  </Style>
-                </Textbox>
-              </ReportItems>
-              <KeepTogether>true</KeepTogether>
-              <Top>2.39583in</Top>
-              <Height>0.81388in</Height>
-              <Width>7.7115in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Rectangle>
             <Rectangle Name="Rectangle8">
               <ReportItems>
                 <Textbox Name="Textbox4">
@@ -6627,6 +6540,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox4</rd:DefaultName>
                   <Top>0.00208in</Top>
+                  <Left>0.00615in</Left>
                   <Height>5mm</Height>
                   <Width>31.74308mm</Width>
                   <Style>
@@ -6670,6 +6584,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox4</rd:DefaultName>
                   <Top>0.21407in</Top>
+                  <Left>0.00615in</Left>
                   <Height>5mm</Height>
                   <Width>98.94113mm</Width>
                   <ZIndex>1</ZIndex>
@@ -6704,6 +6619,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox4</rd:DefaultName>
                   <Top>0.60991in</Top>
+                  <Left>0.00615in</Left>
                   <Height>5mm</Height>
                   <Width>21.45673mm</Width>
                   <ZIndex>2</ZIndex>
@@ -6738,6 +6654,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox4</rd:DefaultName>
                   <Top>0.82241in</Top>
+                  <Left>0.00615in</Left>
                   <Height>5mm</Height>
                   <Width>11.66715mm</Width>
                   <ZIndex>3</ZIndex>
@@ -6772,7 +6689,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox4</rd:DefaultName>
                   <Top>0.60435in</Top>
-                  <Left>0.85864in</Left>
+                  <Left>0.86479in</Left>
                   <Height>5mm</Height>
                   <Width>75.58597mm</Width>
                   <ZIndex>4</ZIndex>
@@ -6812,7 +6729,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox4</rd:DefaultName>
                   <Top>0.81685in</Top>
-                  <Left>0.47323in</Left>
+                  <Left>0.47938in</Left>
                   <Height>5mm</Height>
                   <Width>85.37555mm</Width>
                   <ZIndex>5</ZIndex>
@@ -6849,7 +6766,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox100</rd:DefaultName>
                   <Top>1.05861in</Top>
-                  <Left>1.00411in</Left>
+                  <Left>1.01026in</Left>
                   <Height>5mm</Height>
                   <Width>0.55416in</Width>
                   <ZIndex>6</ZIndex>
@@ -6887,7 +6804,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox100</rd:DefaultName>
                   <Top>1.07084in</Top>
-                  <Left>1.55829in</Left>
+                  <Left>1.56444in</Left>
                   <Height>0.20111in</Height>
                   <Width>0.10277in</Width>
                   <ZIndex>7</ZIndex>
@@ -6919,7 +6836,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox100</rd:DefaultName>
                   <Top>1.05861in</Top>
-                  <Left>1.66358in</Left>
+                  <Left>1.66973in</Left>
                   <Height>5mm</Height>
                   <Width>0.55416in</Width>
                   <ZIndex>8</ZIndex>
@@ -6956,7 +6873,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox100</rd:DefaultName>
                   <Top>1.05861in</Top>
-                  <Left>2.35107in</Left>
+                  <Left>2.35722in</Left>
                   <Height>5mm</Height>
                   <Width>0.55416in</Width>
                   <ZIndex>9</ZIndex>
@@ -6994,7 +6911,7 @@
                   </Paragraphs>
                   <rd:DefaultName>Textbox100</rd:DefaultName>
                   <Top>1.07084in</Top>
-                  <Left>2.21774in</Left>
+                  <Left>2.22389in</Left>
                   <Height>5mm</Height>
                   <Width>0.13055in</Width>
                   <ZIndex>10</ZIndex>
@@ -7008,12 +6925,141 @@
                     <PaddingBottom>2pt</PaddingBottom>
                   </Style>
                 </Textbox>
+                <Rectangle Name="Rectangle7">
+                  <ReportItems>
+                    <Textbox Name="Textbox119">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>S.K. POLYMER CO.,LTD.</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox119</rd:DefaultName>
+                      <Top>0.04167in</Top>
+                      <Left>0.99432in</Left>
+                      <Height>0.25in</Height>
+                      <Width>5.73347in</Width>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>#bb792b</Color>
+                          <Style>Solid</Style>
+                        </BottomBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="Textbox120">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>166 Soi Thiantalay 20 , Bangkhunthian-Chytalay Rd., Samaedam, Bangkhunthian, Bangkok 10150, Thailand</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox119</rd:DefaultName>
+                      <Top>0.28333in</Top>
+                      <Height>0.25in</Height>
+                      <Width>7.7115in</Width>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="Textbox121">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Tel : (662) 892 - 1092 up to 97      Fax : (662) 892 - 1098      www.skthai.com      E-mail : sales@skthai.com</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox119</rd:DefaultName>
+                      <Top>0.48888in</Top>
+                      <Height>0.175in</Height>
+                      <Width>7.7115in</Width>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                  <KeepTogether>true</KeepTogether>
+                  <Top>1.30936in</Top>
+                  <Height>0.71388in</Height>
+                  <Width>7.7115in</Width>
+                  <ZIndex>11</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Rectangle>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Top>1.00417in</Top>
-              <Height>1.33472in</Height>
-              <Width>3.89532in</Width>
-              <ZIndex>2</ZIndex>
+              <Height>2.02324in</Height>
+              <Width>7.7115in</Width>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -7293,10 +7339,10 @@
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Top>1.62658in</Top>
-              <Left>4.23357in</Left>
+              <Left>4.23972in</Left>
               <Height>0.52597in</Height>
               <Width>2.60453in</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -7327,9 +7373,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox53</rd:DefaultName>
               <Top>0.375in</Top>
+              <Left>0.00615in</Left>
               <Height>5mm</Height>
               <Width>195.71589mm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -7359,9 +7406,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox53</rd:DefaultName>
               <Top>0.53768in</Top>
+              <Left>0.00615in</Left>
               <Height>5mm</Height>
               <Width>195.71589mm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -7391,9 +7439,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox53</rd:DefaultName>
               <Top>0.75018in</Top>
+              <Left>0.00615in</Left>
               <Height>5mm</Height>
               <Width>116.94732mm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -7428,10 +7477,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox5</rd:DefaultName>
               <Top>0.74981in</Top>
-              <Left>4.69328in</Left>
+              <Left>4.69943in</Left>
               <Height>5.00944mm</Height>
               <Width>1.33843in</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -7477,10 +7526,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox53</rd:DefaultName>
               <Top>0.06944in</Top>
-              <Left>0.01009in</Left>
+              <Left>0.01624in</Left>
               <Height>5mm</Height>
               <Width>195.71589mm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

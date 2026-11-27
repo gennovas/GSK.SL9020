@@ -1,5 +1,6 @@
+
  
-CREATE PROCEDURE [dbo].[GEN_ExpKQIAutomotivePlantPostingSp] (
+ALTER PROC [dbo].[GEN_ExpKQIAutomotivePlantPostingSp] (
 	@pSessionID				RowPointerType
 	, @pYear				INT
 	, @pSlsManStarting		SlsManType = NULL
@@ -341,6 +342,7 @@ WHERE DocType = 'I'
 	and CustNum BETWEEN @pCustNumStarting and @pCustNumEnding
 	and ISNULL(CustOverseas,0) = CASE WHEN @pCustLocalOverseas = 'L' THEN 0 ELSE CASE WHEN @pCustLocalOverseas = 'O' THEN 1 ELSE ISNULL(CustOverseas,0) END END
 	and ((@pCustNewCurrRegis = 'A') Or (@pCustNewCurrRegis = 'N' and ISNULL(YEAR(CustRegisterDate),@pYear) = @pYear) Or (@pCustNewCurrRegis = 'C' and ISNULL(YEAR(CustRegisterDate),@pYear) < @pYear))
+	and BU = ISNULL(@BU, BU)
 GROUP BY YEAR(InvDate),MONTH(InvDate)
 
 OPEN data_cursor
@@ -516,7 +518,7 @@ WHERE DocType = 'D'
 	and CustNum BETWEEN @pCustNumStarting and @pCustNumEnding
 	and ISNULL(CustOverseas,0) = CASE WHEN @pCustLocalOverseas = 'L' THEN 0 ELSE CASE WHEN @pCustLocalOverseas = 'O' THEN 1 ELSE ISNULL(CustOverseas,0) END END
 	and ((@pCustNewCurrRegis = 'A') Or (@pCustNewCurrRegis = 'N' and ISNULL(YEAR(CustRegisterDate),@pYear) = @pYear) Or (@pCustNewCurrRegis = 'C' and ISNULL(YEAR(CustRegisterDate),@pYear) < @pYear))
-	AND (@BU IS NULL OR co.Uf_BU = @BU)
+	AND e.BU = ISNULL(@BU, e.BU)
 GROUP BY YEAR(InvDate),MONTH(InvDate)
 
 OPEN data_cursor
@@ -693,6 +695,7 @@ WHERE DocType in ('I')
 	and CustNum BETWEEN @pCustNumStarting and @pCustNumEnding
 	and ISNULL(CustOverseas,0) = CASE WHEN @pCustLocalOverseas = 'L' THEN 0 ELSE CASE WHEN @pCustLocalOverseas = 'O' THEN 1 ELSE ISNULL(CustOverseas,0) END END
 	and ((@pCustNewCurrRegis = 'A') Or (@pCustNewCurrRegis = 'N' and ISNULL(YEAR(CustRegisterDate),@pYear) = @pYear) Or (@pCustNewCurrRegis = 'C' and ISNULL(YEAR(CustRegisterDate),@pYear) < @pYear))
+	AND BU = ISNULL(@BU, BU)
 GROUP BY YEAR(InvDate),MONTH(InvDate)
 
 OPEN data_cursor
@@ -869,6 +872,7 @@ WHERE DocType in ('I')
 	and CustNum BETWEEN @pCustNumStarting and @pCustNumEnding
 	and ISNULL(CustOverseas,0) = CASE WHEN @pCustLocalOverseas = 'L' THEN 0 ELSE CASE WHEN @pCustLocalOverseas = 'O' THEN 1 ELSE ISNULL(CustOverseas,0) END END
 	and ((@pCustNewCurrRegis = 'A') Or (@pCustNewCurrRegis = 'N' and ISNULL(YEAR(CustRegisterDate),@pYear) = @pYear) Or (@pCustNewCurrRegis = 'C' and ISNULL(YEAR(CustRegisterDate),@pYear) < @pYear))
+	AND BU = ISNULL(@BU, BU)
 GROUP BY YEAR(InvDate),MONTH(InvDate)
 
 OPEN data_cursor
@@ -1046,7 +1050,7 @@ WHERE DocType = 'Q'
 	and CustNum BETWEEN @pCustNumStarting and @pCustNumEnding
 	and ISNULL(CustOverseas,0) = CASE WHEN @pCustLocalOverseas = 'L' THEN 0 ELSE CASE WHEN @pCustLocalOverseas = 'O' THEN 1 ELSE ISNULL(CustOverseas,0) END END
 	and ((@pCustNewCurrRegis = 'A') Or (@pCustNewCurrRegis = 'N' and ISNULL(YEAR(CustRegisterDate),@pYear) = @pYear) Or (@pCustNewCurrRegis = 'C' and ISNULL(YEAR(CustRegisterDate),@pYear) < @pYear))
-	AND (@BU IS NULL OR q.Uf_UnitCode3 = @BU)
+	AND e.BU = ISNULL(@BU, e.BU)
 GROUP BY YEAR(InvDate),MONTH(InvDate)
 
 OPEN data_cursor
@@ -1223,7 +1227,7 @@ WHERE DocType = 'Q'
 	and CustNum BETWEEN @pCustNumStarting and @pCustNumEnding
 	and ISNULL(CustOverseas,0) = CASE WHEN @pCustLocalOverseas = 'L' THEN 0 ELSE CASE WHEN @pCustLocalOverseas = 'O' THEN 1 ELSE ISNULL(CustOverseas,0) END END
 	and ((@pCustNewCurrRegis = 'A') Or (@pCustNewCurrRegis = 'N' and ISNULL(YEAR(CustRegisterDate),@pYear) = @pYear) Or (@pCustNewCurrRegis = 'C' and ISNULL(YEAR(CustRegisterDate),@pYear) < @pYear))
-	AND (@BU IS NULL OR q.Uf_UnitCode3 = @BU)
+	AND e.BU = ISNULL(@BU, e.BU)
 GROUP BY YEAR(InvDate),MONTH(InvDate)
 
 OPEN data_cursor
